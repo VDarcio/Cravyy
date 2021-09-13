@@ -24,6 +24,7 @@ class OnBoardingViewController: UIViewController{
             //change the button if the user is in the last page
             if currentPage == slides.count - 1{
                 nextButton.setTitle("Get Started", for: .normal)
+                
             }else{
                 nextButton.setTitle("Next", for: .normal)
             }

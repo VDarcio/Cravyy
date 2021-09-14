@@ -10,6 +10,7 @@
 		756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */; };
 		756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */; };
 		756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756CE30126EFF7250066EBA7 /* Images.xcassets */; };
+		756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE30526F0174C0066EBA7 /* SignUpViewController.swift */; };
 		757D910926E8FB4D00598DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D910826E8FB4D00598DF1 /* AppDelegate.swift */; };
 		757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */; };
 		757D911026E8FB4D00598DF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757D910E26E8FB4D00598DF1 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewhelper.swift; sourceTree = "<group>"; };
 		756CE30126EFF7250066EBA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		756CE30526F0174C0066EBA7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		757D910526E8FB4D00598DF1 /* Cravyy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cravyy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757D910826E8FB4D00598DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,18 +108,44 @@
 		756CE2FE26EFDC690066EBA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				756CE30126EFF7250066EBA7 /* Images.xcassets */,
 				756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		756CE30326F00A5B0066EBA7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				757D911126E8FB4D00598DF1 /* Cravyy.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		756CE30426F00A920066EBA7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				757D912C26E8FB5400598DF1 /* CravyyUITests */,
+				757D912126E8FB5400598DF1 /* CravyyTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		756CE30726F0176C0066EBA7 /* SignUp and SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				756CE30526F0174C0066EBA7 /* SignUpViewController.swift */,
+			);
+			path = "SignUp and SignIn";
 			sourceTree = "<group>";
 		};
 		757D90FC26E8FB4D00598DF1 = {
 			isa = PBXGroup;
 			children = (
 				757D910726E8FB4D00598DF1 /* Cravyy */,
-				756CE30126EFF7250066EBA7 /* Images.xcassets */,
-				757D912126E8FB5400598DF1 /* CravyyTests */,
-				757D912C26E8FB5400598DF1 /* CravyyUITests */,
+				756CE2FA26EF79180066EBA7 /* Delegates */,
+				756CE30326F00A5B0066EBA7 /* Data */,
+				756CE30426F00A920066EBA7 /* Tests */,
 				757D910626E8FB4D00598DF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,14 +163,11 @@
 		757D910726E8FB4D00598DF1 /* Cravyy */ = {
 			isa = PBXGroup;
 			children = (
+				757D911926E8FB5300598DF1 /* Info.plist */,
 				756CE2FE26EFDC690066EBA7 /* Helpers */,
-				756CE2FA26EF79180066EBA7 /* Delegates */,
 				75B7B5F126EEA9C9009A5D40 /* Models */,
 				75B7B5EB26EE999A009A5D40 /* Views */,
 				75B7B5EC26EEA70E009A5D40 /* OnBoarding */,
-				757D911626E8FB5300598DF1 /* LaunchScreen.storyboard */,
-				757D911926E8FB5300598DF1 /* Info.plist */,
-				757D911126E8FB4D00598DF1 /* Cravyy.xcdatamodeld */,
 			);
 			path = Cravyy;
 			sourceTree = "<group>";
@@ -168,8 +193,10 @@
 		75B7B5EB26EE999A009A5D40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				757D910E26E8FB4D00598DF1 /* Main.storyboard */,
+				756CE30726F0176C0066EBA7 /* SignUp and SignIn */,
 				756CE2F726EF78A50066EBA7 /* FirstViewController */,
+				757D910E26E8FB4D00598DF1 /* Main.storyboard */,
+				757D911626E8FB5300598DF1 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +354,7 @@
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
+				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
 				756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */,
 			);

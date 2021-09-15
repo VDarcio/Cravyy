@@ -50,10 +50,10 @@ class OnBoardingViewController: UIViewController{
         
         //Navigate to the home page if the user taps next after the last page
         if currentPage == slides.count - 1{
-            let controller = storyboard?.instantiateViewController(identifier: "FirstVC") as! UINavigationController
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .flipHorizontal
-            present(controller, animated: true, completion: nil)
+            let firstVc = storyboard?.instantiateViewController(identifier: "FirstVC") as! FirstViewController
+            firstVc.modalPresentationStyle = .fullScreen
+            firstVc.modalTransitionStyle = .flipHorizontal
+            present(firstVc, animated: true, completion: nil)
         }else{
             //if not, go to the next page
             currentPage += 1

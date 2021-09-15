@@ -9,21 +9,18 @@ import UIKit
 
 class SignUpViewController: UIViewController {
  
+    let firstviewController = FirstViewController()
+    
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-    }
-    //MARK:-Buttons Handling
-    
-    @IBAction func loginButtonTapped(_ sender: Any) {
        
-        
     }
+    
     
     @IBAction func signUpTapped(_ sender: Any) {
+        
     }
     
 

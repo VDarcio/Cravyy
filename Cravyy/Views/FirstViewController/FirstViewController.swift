@@ -9,46 +9,49 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    //IBOutlets
     @IBOutlet weak var WelcomeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    var signUpVC :SignUpViewController?
+    
+   private var signUpVC :SignUpViewController?
+   private var loginVC: LoginViewController?
+    
     
    
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    loadWelcomeLabel()
-         signUpVC = storyboard?.instantiateViewController(identifier: "SignUpVC") as? SignUpViewController
+         //instantiateViews
+        signUpVC = storyboard?.instantiateViewController(identifier: "SignUpVC") as? SignUpViewController
+        loginVC = storyboard?.instantiateViewController(identifier: "LoginVC") as? LoginViewController
         
-    
+      
+        
     }
+    
+
     
     @IBAction func SignupWithGoogleTapped(_ sender: Any) {
     }
     
     @IBAction func signUptapped(_ sender: Any) {
+        //check if signupVc exists, if it does... present modally
         if signUpVC != nil{
             present(signUpVC!, animated: true, completion: nil)
         }
         
     }
     
-    
-    
-    //MARK:-Methods to Load Labels
-    
-    func loadWelcomeLabel (){
-       
-        WelcomeLabel.text=""
-              let titleText="Welcome🐒"
-                var charIndex = 0.0
-              for letter in titleText{
-                   Timer.scheduledTimer(withTimeInterval: 0.1*charIndex, repeats: false) { (timer) in
-                      self.WelcomeLabel.text?.append(letter)
-                   }
-                 charIndex+=1
-              }
+    @IBAction func loginPressed(_ sender: UIButton) {
+        //check if loginVC exists, if it does... present modally
+        if loginVC != nil{
+            present(loginVC!, animated: true, completion: nil)
+        }
+        
     }
+    
    
   
 }

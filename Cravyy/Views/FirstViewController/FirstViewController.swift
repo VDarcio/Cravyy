@@ -11,9 +11,9 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var WelcomeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
-    
     var signUpVC :SignUpViewController?
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

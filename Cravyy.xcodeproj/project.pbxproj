@@ -21,6 +21,7 @@
 		75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */; };
 		75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */; };
 		75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */; };
+		75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155726F18ACC00E2FC50 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
+		75CB155726F18ACC00E2FC50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				756CE30526F0174C0066EBA7 /* SignUpViewController.swift */,
+				75CB155726F18ACC00E2FC50 /* LoginViewController.swift */,
 			);
 			path = "SignUp and SignIn";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
+				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,
 				756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

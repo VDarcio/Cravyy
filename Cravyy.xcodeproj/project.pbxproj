@@ -24,6 +24,10 @@
 		75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155726F18ACC00E2FC50 /* LoginViewController.swift */; };
 		75CB155A26F297C100E2FC50 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155926F297C000E2FC50 /* PreferencesViewController.swift */; };
 		75CB155C26F2982B00E2FC50 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155B26F2982B00E2FC50 /* Preferences.swift */; };
+		75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */; };
+		75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156026F2C56000E2FC50 /* HomeViewController.swift */; };
+		75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156226F2C62300E2FC50 /* MapKitViewController.swift */; };
+		75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156426F2C8F500E2FC50 /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		75CB155726F18ACC00E2FC50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CB155926F297C000E2FC50 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		75CB155B26F2982B00E2FC50 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		75CB156026F2C56000E2FC50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		75CB156226F2C62300E2FC50 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		75CB156426F2C8F500E2FC50 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,7 @@
 		75B7B5EB26EE999A009A5D40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75CB155F26F2C52D00E2FC50 /* TabBarControllers */,
 				756CE30726F0176C0066EBA7 /* SignUp and SignIn */,
 				756CE2F726EF78A50066EBA7 /* FirstViewController */,
 				757D910E26E8FB4D00598DF1 /* Main.storyboard */,
@@ -225,6 +234,17 @@
 				75CB155B26F2982B00E2FC50 /* Preferences.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		75CB155F26F2C52D00E2FC50 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */,
+				75CB156026F2C56000E2FC50 /* HomeViewController.swift */,
+				75CB156226F2C62300E2FC50 /* MapKitViewController.swift */,
+				75CB156426F2C8F500E2FC50 /* RandomViewController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +382,12 @@
 				75CB155C26F2982B00E2FC50 /* Preferences.swift in Sources */,
 				757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */,
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
+				75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */,
+				75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */,
+				75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
+				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
 				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,

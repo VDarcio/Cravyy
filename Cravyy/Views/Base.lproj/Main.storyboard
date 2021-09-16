@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPC-cQ-csr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8B-8k-4V4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -157,9 +157,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Igl-Pg-Yl5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R00-0z-K24">
                                 <rect key="frame" x="20" y="390" width="374" height="116"/>
                                 <subviews>
@@ -237,7 +234,6 @@
                         <viewLayoutGuide key="safeArea" id="txn-l3-GYa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Igl-Pg-Yl5" firstAttribute="top" secondItem="baE-3o-370" secondAttribute="top" id="3eD-bT-3In"/>
                             <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="R00-0z-K24" secondAttribute="trailing" constant="20" id="58X-y0-9HU"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="top" secondItem="R00-0z-K24" secondAttribute="bottom" constant="40" id="7Wz-zl-0YH"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="centerX" secondItem="baE-3o-370" secondAttribute="centerX" id="Bng-UR-FPb"/>
@@ -245,11 +241,8 @@
                             <constraint firstItem="R00-0z-K24" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" constant="20" id="FQ3-l9-Yko"/>
                             <constraint firstItem="4ED-o7-QeZ" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" id="Hw0-SM-5s2"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="centerX" secondItem="baE-3o-370" secondAttribute="centerX" id="Q9z-Mz-yhQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Igl-Pg-Yl5" secondAttribute="bottom" id="RcK-wQ-kxp"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="centerY" secondItem="baE-3o-370" secondAttribute="centerY" id="SGM-e0-mil"/>
-                            <constraint firstItem="Igl-Pg-Yl5" firstAttribute="leading" secondItem="baE-3o-370" secondAttribute="leading" id="XCM-k9-UXe"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" constant="60" id="eWr-cy-GaH"/>
-                            <constraint firstAttribute="trailing" secondItem="Igl-Pg-Yl5" secondAttribute="trailing" id="j1A-21-dji"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="top" secondItem="4ED-o7-QeZ" secondAttribute="bottom" id="lsp-Af-lMO"/>
                             <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="4ED-o7-QeZ" secondAttribute="trailing" id="mXj-Ei-yes"/>
                             <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="UeO-UO-SgL" secondAttribute="trailing" constant="60" id="u4a-F2-1dh"/>
@@ -603,11 +596,133 @@
             </objects>
             <point key="canvasLocation" x="3600.0000000000005" y="66.964285714285708"/>
         </scene>
+        <!--Random-->
+        <scene sceneID="T7f-cH-I6f">
+            <objects>
+                <viewController id="bJS-nA-crF" customClass="RandomViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzq-N4-nit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BhJ-x9-faq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Random" image="shuffle" catalog="system" id="itp-5v-Pbb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsU-p7-rGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4348" y="812"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="y2h-Gd-xvQ">
+            <objects>
+                <viewController id="8yi-is-nSR" customClass="MapKitViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BUt-lf-dE9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-ju-9Eq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4gL-nK-f59"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OUl-ju-9Eq" firstAttribute="leading" secondItem="BUt-lf-dE9" secondAttribute="leading" id="QrW-za-uHV"/>
+                            <constraint firstAttribute="bottom" secondItem="OUl-ju-9Eq" secondAttribute="bottom" id="qT5-RX-vlz"/>
+                            <constraint firstAttribute="trailing" secondItem="OUl-ju-9Eq" secondAttribute="trailing" id="rCI-1k-fdc"/>
+                            <constraint firstItem="OUl-ju-9Eq" firstAttribute="top" secondItem="BUt-lf-dE9" secondAttribute="top" id="sbt-4L-Ekq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="mZ1-4W-30J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYs-lH-j4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5291" y="812"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="967-NM-DeH">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="KOb-QE-J0w" customClass="HomeViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPl-sU-fk0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-OT-mvg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-JH-hMC">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="1hf-hB-C5L"/>
+                                            <constraint firstAttribute="height" constant="35" id="asN-JA-Oob"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="mappin.circle.fill" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cairo, Egipto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGi-fG-yVu">
+                                        <rect key="frame" x="45" y="0.0" width="324" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7I-Fu-8ce">
+                                        <rect key="frame" x="379" y="0.0" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="bbk-vH-Qro"/>
+                                            <constraint firstAttribute="height" constant="35" id="jUL-vE-Xwl"/>
+                                        </constraints>
+                                        <state key="normal" image="cravyy_Icon-removebg-preview"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yGm-WI-xpg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OOa-OT-mvg" firstAttribute="leading" secondItem="yGm-WI-xpg" secondAttribute="leading" id="OlV-7T-1UD"/>
+                            <constraint firstItem="yGm-WI-xpg" firstAttribute="trailing" secondItem="OOa-OT-mvg" secondAttribute="trailing" id="nbV-WG-NuP"/>
+                            <constraint firstItem="OOa-OT-mvg" firstAttribute="top" secondItem="yGm-WI-xpg" secondAttribute="top" id="wGC-si-CTC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="building.2" catalog="system" id="WrM-ZC-3fN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3RB-K7-kzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3381" y="812"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="da9-dZ-z1t">
+            <objects>
+                <tabBarController id="k8B-8k-4V4" customClass="MainTabBarController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MQL-lv-CNT"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLg-LH-dE2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KOb-QE-J0w" kind="relationship" relationship="viewControllers" id="zxW-w6-V3q"/>
+                        <segue destination="8yi-is-nSR" kind="relationship" relationship="viewControllers" id="XYJ-Hc-vQi"/>
+                        <segue destination="bJS-nA-crF" kind="relationship" relationship="viewControllers" id="7q2-Ky-0vP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvV-2h-wfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4349" y="67"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Background" width="500" height="500"/>
+        <image name="building.2" catalog="system" width="128" height="106"/>
         <image name="cravyy_Icon-removebg-preview" width="250" height="250"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

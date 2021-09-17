@@ -685,8 +685,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-ff-ct2">
                                 <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-UU-Ujd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1126"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-UU-Ujd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1166"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-qF-WYe">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="369"/>
@@ -722,11 +722,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="iDv-Ht-3l2"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="72b-Ea-NhU">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="72b-Ea-NhU">
                                                             <size key="itemSize" width="99" height="58"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="40" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                         <connections>
@@ -751,7 +751,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-fi-ch1">
-                                                <rect key="frame" x="0.0" y="369" width="414" height="388"/>
+                                                <rect key="frame" x="0.0" y="389" width="414" height="388"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riM-Fz-LjO">
                                                         <rect key="frame" x="344" y="0.0" width="50" height="32"/>
@@ -809,7 +809,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-S0-FeA">
-                                                <rect key="frame" x="0.0" y="757" width="414" height="369"/>
+                                                <rect key="frame" x="0.0" y="797" width="414" height="369"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-Rl-xFB">
                                                         <rect key="frame" x="344" y="0.0" width="50" height="32"/>

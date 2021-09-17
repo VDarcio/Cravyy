@@ -700,16 +700,16 @@
                                                         </state>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BzN-tc-SeL">
-                                                        <rect key="frame" x="16" y="16" width="278" height="45"/>
+                                                        <rect key="frame" x="16" y="16" width="278" height="145"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-Bt-qUE">
-                                                                <rect key="frame" x="0.0" y="0.0" width="278" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="278" height="125.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top rated restaraunts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-mg-UQc">
-                                                                <rect key="frame" x="0.0" y="25.5" width="278" height="19.5"/>
+                                                                <rect key="frame" x="0.0" y="125.5" width="278" height="19.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -717,10 +717,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-1H-N5z">
-                                                        <rect key="frame" x="0.0" y="69" width="414" height="300"/>
+                                                        <rect key="frame" x="0.0" y="169" width="414" height="200"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="300" id="iDv-Ht-3l2"/>
+                                                            <constraint firstAttribute="height" constant="200" id="iDv-Ht-3l2"/>
                                                         </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="72b-Ea-NhU">
                                                             <size key="itemSize" width="99" height="58"/>
@@ -899,7 +899,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RB-K7-kzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3379.7101449275365" y="811.60714285714278"/>
+            <point key="canvasLocation" x="3191" y="820"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="da9-dZ-z1t">

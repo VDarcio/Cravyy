@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */; };
+		7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */; };
+		7515547E26F426F0002679FB /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547D26F426F0002679FB /* Restaurants.swift */; };
+		7515548526F42B51002679FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515548426F42B51002679FB /* CardView.swift */; };
 		756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */; };
 		756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */; };
 		756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756CE30126EFF7250066EBA7 /* Images.xcassets */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		7515547D26F426F0002679FB /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
+		7515548426F42B51002679FB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewhelper.swift; sourceTree = "<group>"; };
 		756CE30126EFF7250066EBA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -102,6 +110,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7515547626F4265D002679FB /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				7515547F26F429F2002679FB /* FeaturedCollectionView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		7515547F26F429F2002679FB /* FeaturedCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */,
+				7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */,
+			);
+			path = FeaturedCollectionView;
+			sourceTree = "<group>";
+		};
+		7515548326F42B40002679FB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				7515548426F42B51002679FB /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 		756CE2F726EF78A50066EBA7 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				757D910726E8FB4D00598DF1 /* Cravyy */,
-				756CE2FA26EF79180066EBA7 /* Delegates */,
-				756CE30326F00A5B0066EBA7 /* Data */,
 				756CE30426F00A920066EBA7 /* Tests */,
 				757D910626E8FB4D00598DF1 /* Products */,
 			);
@@ -179,9 +210,12 @@
 		757D910726E8FB4D00598DF1 /* Cravyy */ = {
 			isa = PBXGroup;
 			children = (
+				756CE30326F00A5B0066EBA7 /* Data */,
+				756CE2FA26EF79180066EBA7 /* Delegates */,
 				757D911926E8FB5300598DF1 /* Info.plist */,
 				756CE2FE26EFDC690066EBA7 /* Helpers */,
 				75B7B5F126EEA9C9009A5D40 /* Models */,
+				7515547626F4265D002679FB /* Custom Views */,
 				75B7B5EB26EE999A009A5D40 /* Views */,
 				75B7B5EC26EEA70E009A5D40 /* OnBoarding */,
 			);
@@ -209,6 +243,7 @@
 		75B7B5EB26EE999A009A5D40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7515548326F42B40002679FB /* CardView */,
 				75CB155F26F2C52D00E2FC50 /* TabBarControllers */,
 				756CE30726F0176C0066EBA7 /* SignUp and SignIn */,
 				756CE2F726EF78A50066EBA7 /* FirstViewController */,
@@ -232,6 +267,7 @@
 			children = (
 				75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */,
 				75CB155B26F2982B00E2FC50 /* Preferences.swift */,
+				7515547D26F426F0002679FB /* Restaurants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +388,7 @@
 			files = (
 				756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */,
 				757D911826E8FB5300598DF1 /* LaunchScreen.storyboard in Resources */,
+				7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */,
 				757D911026E8FB4D00598DF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,14 +421,17 @@
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
 				75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */,
 				75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */,
+				7515548526F42B51002679FB /* CardView.swift in Sources */,
 				75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,
+				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
 				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,
 				756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */,
+				7515547E26F426F0002679FB /* Restaurants.swift in Sources */,
 				75CB155A26F297C100E2FC50 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

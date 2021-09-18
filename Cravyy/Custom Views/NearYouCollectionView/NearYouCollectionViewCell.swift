@@ -15,10 +15,10 @@ class NearYouCollectionViewCell: UICollectionViewCell {
     
     
     
-    func setup(_ restautant:Restaurants){
-        restarauntsName.text = restautant.name
-        restarauntsDistance.text = restautant.description
-        restarauntsImageView.image = restautant.image
+    func setup(_ nearYou:Nearyou){
+        restarauntsName.text = nearYou.name
+        restarauntsDistance.text = nearYou.distance
+        restarauntsImageView.image = nearYou.image
         
     }
     

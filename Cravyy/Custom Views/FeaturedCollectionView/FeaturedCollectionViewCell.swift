@@ -13,10 +13,10 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var restautantName: UILabel!
     @IBOutlet weak var restaurantDetail: UILabel!
     
-    func setup(_ restautant:Restaurants){
-        restautantName.text = restautant.name
-        restaurantDetail.text = restautant.description
-        restaurantImageView.image = restautant.image
+    func setup(_ featured:Featured){
+        restautantName.text = featured.name
+        restaurantDetail.text = featured.rating
+        restaurantImageView.image = featured.image
         
     }
     

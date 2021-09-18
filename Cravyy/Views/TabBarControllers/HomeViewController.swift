@@ -13,51 +13,87 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var nearYouCollectionView: UICollectionView!
     @IBOutlet weak var BestDealsCollectionView: UICollectionView!
     
-    var restaurants : [Restaurants] = [ .init(name: "Casa do Darcio", description: "Rio de janeiro, Brasil", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),.init(name: "Casa do amilcar", description: " Brasil", image: #imageLiteral(resourceName: "Untitled design")),
-                                        .init(name: "A casa do pai dealguem grande aqui", description: "huambo", image: #imageLiteral(resourceName: "Untitled design copy 2")),
-                                        .init(name: "Fim da CV", description: "Lisboaaa", image: #imageLiteral(resourceName: "Untitled design copy"))
-                                        
+    
+    //All arrays
+    var restaurants : [Restaurants] = []
+    var featured: [Featured] = [
+        .init(name: "Mcdoalds", rating: "7.3/10", image: #imageLiteral(resourceName: "Untitled design")),
+        .init(name: "Burguer King", rating: "3.3/10", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
+        .init(name: "Guilty by olivier", rating: "9.3/10", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "Carne moida", rating: "4.3/10", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
     ]
+    var nearYou:[Nearyou] = [
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "abelha", distance: "15KM", image: #imageLiteral(resourceName: "Untitled design copy")),
+        .init(name: "sei la", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),]
+    var bestDeals:[BestDeals] = [
+        .init(name: "Sushiiiiii", price: "25-60$", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
+        .init(name: "Sushiiiiii", price: "25-60$", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
+        .init(name: "Sushiiiiii", price: "25-60$", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview"))]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        featuredCollectionView.register(UINib(nibName: "FeaturedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCollectionViewCell")
-        nearYouCollectionView.register(UINib(nibName: "NearYouCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NearYouCollectionViewCell")
-        BestDealsCollectionView.register(UINib(nibName: "BestDealsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BestDealsCollectionViewCell")
-        
-        
-        
+        registerCells()
     }
+   
+   
     
 
 
 }
-
+//MARK:-TableView Delegates and dataSource
 extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    //Register UiNib for every created cell
+    func registerCells(){
+        featuredCollectionView.register(UINib(nibName: "FeaturedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCollectionViewCell")
+        
+        nearYouCollectionView.register(UINib(nibName: "NearYouCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NearYouCollectionViewCell")
+        
+        BestDealsCollectionView.register(UINib(nibName: "BestDealsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BestDealsCollectionViewCell")
+        
+        
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return restaurants.count
+        //switch thru all the collectionviews and return the count to poupulate the 3 collectionviews
+        switch collectionView{
+        case featuredCollectionView:
+            return featured.count
+        case nearYouCollectionView:
+            return nearYou.count
+        case BestDealsCollectionView:
+            return bestDeals.count
+        
+        default:
+            return 0
+        }
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         switch collectionView{
         case featuredCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCollectionViewCell", for: indexPath) as! FeaturedCollectionViewCell
-            cell.setup(restaurants[indexPath.row])
+            cell.setup(featured[indexPath.row])
             return cell
         case nearYouCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NearYouCollectionViewCell", for: indexPath) as! NearYouCollectionViewCell
-            cell.setup(restaurants[indexPath.row])
+            cell.setup(nearYou[indexPath.row])
             return cell
         case BestDealsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestDealsCollectionViewCell", for: indexPath) as! BestDealsCollectionViewCell
-            cell.setup(restaurants[indexPath.row])
+            cell.setup(bestDeals[indexPath.row])
             return cell
-            
-        
         default:
             return UICollectionViewCell()
         }

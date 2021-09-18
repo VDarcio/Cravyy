@@ -10,12 +10,11 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var featuredCollectionView: UICollectionView!
-    
     @IBOutlet weak var nearYouCollectionView: UICollectionView!
-    
+    @IBOutlet weak var BestDealsCollectionView: UICollectionView!
     
     var restaurants : [Restaurants] = [ .init(name: "Casa do Darcio", description: "Rio de janeiro, Brasil", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),.init(name: "Casa do amilcar", description: " Brasil", image: #imageLiteral(resourceName: "Untitled design")),
-                                        .init(name: "Casa da praia do amigo", description: "huambo", image: #imageLiteral(resourceName: "Untitled design copy 2")),
+                                        .init(name: "A casa do pai dealguem grande aqui", description: "huambo", image: #imageLiteral(resourceName: "Untitled design copy 2")),
                                         .init(name: "Fim da CV", description: "Lisboaaa", image: #imageLiteral(resourceName: "Untitled design copy"))
                                         
     ]
@@ -25,6 +24,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         featuredCollectionView.register(UINib(nibName: "FeaturedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCollectionViewCell")
         nearYouCollectionView.register(UINib(nibName: "NearYouCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NearYouCollectionViewCell")
+        BestDealsCollectionView.register(UINib(nibName: "BestDealsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BestDealsCollectionViewCell")
+        
+        
         
     }
     
@@ -50,6 +52,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NearYouCollectionViewCell", for: indexPath) as! NearYouCollectionViewCell
             cell.setup(restaurants[indexPath.row])
             return cell
+        case BestDealsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestDealsCollectionViewCell", for: indexPath) as! BestDealsCollectionViewCell
+            cell.setup(restaurants[indexPath.row])
+            return cell
+            
         
         default:
             return UICollectionViewCell()

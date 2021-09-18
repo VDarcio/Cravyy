@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BestDealsCollectionViewCell" id="gTV-IL-0wX" customClass="BestDealsCollectionViewCell" customModule="Cravyy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-Le-Lvh" customClass="CardView" customModule="Cravyy" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="190" height="290"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-9j-Tho">
+                                <rect key="frame" x="5" y="5" width="180" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A casa do pai dealguem grande aqui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-la-Lki">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants price range" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhh-o5-fS7">
+                                        <rect key="frame" x="0.0" y="77" width="180" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7W-q1-o7I">
+                                        <rect key="frame" x="0.0" y="123" width="180" height="157"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IRe-9j-Tho" firstAttribute="leading" secondItem="EhS-Le-Lvh" secondAttribute="leading" constant="5" id="Gbz-pQ-qaY"/>
+                            <constraint firstAttribute="trailing" secondItem="IRe-9j-Tho" secondAttribute="trailing" constant="5" id="Hz8-2Q-o1E"/>
+                            <constraint firstAttribute="height" constant="290" id="azo-sL-7mz"/>
+                            <constraint firstItem="IRe-9j-Tho" firstAttribute="top" secondItem="EhS-Le-Lvh" secondAttribute="top" constant="5" id="u8o-xs-XpA"/>
+                            <constraint firstAttribute="bottom" secondItem="IRe-9j-Tho" secondAttribute="bottom" constant="5" id="vWo-3x-UDd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EhS-Le-Lvh" secondAttribute="bottom" constant="5" id="67f-3a-IYe"/>
+                <constraint firstItem="EhS-Le-Lvh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="CWv-2b-7af"/>
+                <constraint firstAttribute="trailing" secondItem="EhS-Le-Lvh" secondAttribute="trailing" constant="5" id="Db2-NL-JKZ"/>
+                <constraint firstItem="EhS-Le-Lvh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="flI-MQ-3rl"/>
+            </constraints>
+            <connections>
+                <outlet property="restaurantsImage" destination="b7W-q1-o7I" id="GbQ-3s-wgp"/>
+                <outlet property="restaurantsName" destination="aCe-la-Lki" id="fXh-Yp-RwF"/>
+                <outlet property="restaurantsPrice" destination="Hhh-o5-fS7" id="bxY-rG-qzF"/>
+            </connections>
+            <point key="canvasLocation" x="-42.028985507246382" y="78.348214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

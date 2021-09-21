@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var featuredCollectionView: UICollectionView!
     @IBOutlet weak var nearYouCollectionView: UICollectionView!
     @IBOutlet weak var BestDealsCollectionView: UICollectionView!
+    var ViewAllVC : ViewAllViewViewController?
     
     
     //All arrays
@@ -29,7 +30,7 @@ class HomeViewController: UIViewController {
         .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
         .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
         .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),
-        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2")),]
+        .init(name: "Frango no churrasco", distance: "3KM", image: #imageLiteral(resourceName: "Untitled design copy 2"))]
     var bestDeals:[BestDeals] = [
         .init(name: "Sushiiiiii", price: "25-60$", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
         .init(name: "Sushiiiiii", price: "25-60$", image: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
@@ -40,8 +41,41 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
+       //Instantiate ViewController that presents All the items
+        ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
+        ViewAllVC?.modalPresentationStyle = .fullScreen
+        ViewAllVC?.modalTransitionStyle = .coverVertical
     }
+    
+    
    
+        
+    @IBAction func viewAllPressed(_ sender: UIButton) {
+        //switch thru all tags (0,1,2) to decide the information to be sent to the ViewAllViewController
+        switch sender.tag{
+        case 0 :
+            //present the VC
+            present(ViewAllVC!, animated: true, completion: nil)
+            // set VC's tag as the same as our button
+            ViewAllVC?.tag = sender.tag
+            // Pass information according to our tag
+             ViewAllVC?.featured = featured
+        case 1 :
+            present(ViewAllVC!, animated: true, completion: nil)
+             ViewAllVC?.tag = sender.tag
+             ViewAllVC?.nearYou = nearYou
+        case 2:
+            present(ViewAllVC!, animated: true, completion: nil)
+             ViewAllVC?.tag = sender.tag
+             ViewAllVC?.bestDeals = bestDeals
+         default : return
+        }
+        
+      
+    
+        
+    }
+    
    
     
 
@@ -49,6 +83,9 @@ class HomeViewController: UIViewController {
 }
 //MARK:-TableView Delegates and dataSource
 extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    
+    
     
     //Register UiNib for every created cell
     func registerCells(){
@@ -104,6 +141,9 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         
     }
     
+   
+    }
+ 
     
     
     
@@ -111,4 +151,5 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
     
     
     
-}
+    
+

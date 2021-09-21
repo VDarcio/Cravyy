@@ -39,6 +39,7 @@
 		75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156026F2C56000E2FC50 /* HomeViewController.swift */; };
 		75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156226F2C62300E2FC50 /* MapKitViewController.swift */; };
 		75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156426F2C8F500E2FC50 /* RandomViewController.swift */; };
+		75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		75CB156026F2C56000E2FC50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75CB156226F2C62300E2FC50 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		75CB156426F2C8F500E2FC50 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 		75B7B5EB26EE999A009A5D40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75CECA4A26FA3BF7003EEFF2 /* SecondaryViews */,
 				7515548326F42B40002679FB /* CardView */,
 				75CB155F26F2C52D00E2FC50 /* TabBarControllers */,
 				756CE30726F0176C0066EBA7 /* SignUp and SignIn */,
@@ -318,6 +321,14 @@
 				75CB156426F2C8F500E2FC50 /* RandomViewController.swift */,
 			);
 			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		75CECA4A26FA3BF7003EEFF2 /* SecondaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */,
+			);
+			path = SecondaryViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +481,7 @@
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
+				75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
 				7545F2F726F500F00000BD5E /* BestDealsCollectionViewCell.swift in Sources */,
 				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,

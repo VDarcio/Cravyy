@@ -40,6 +40,7 @@
 		75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156226F2C62300E2FC50 /* MapKitViewController.swift */; };
 		75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156426F2C8F500E2FC50 /* RandomViewController.swift */; };
 		75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */; };
+		75CECA4E26FA82DB003EEFF2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		75CB156226F2C62300E2FC50 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		75CB156426F2C8F500E2FC50 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllViewController.swift; sourceTree = "<group>"; };
+		75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */,
+				75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */,
 			);
 			path = SecondaryViews;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				7515548526F42B51002679FB /* CardView.swift in Sources */,
 				75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,
+				75CECA4E26FA82DB003EEFF2 /* DetailViewController.swift in Sources */,
 				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,

@@ -18,6 +18,8 @@
 		7545F2FA26F69CF80000BD5E /* BestDeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F2F926F69CF80000BD5E /* BestDeals.swift */; };
 		7545F2FC26F69D350000BD5E /* NearYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F2FB26F69D350000BD5E /* NearYou.swift */; };
 		7545F2FE26F69D820000BD5E /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F2FD26F69D820000BD5E /* Featured.swift */; };
+		7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */; };
+		7560E3F226FB6793005181F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3F126FB6793005181F3 /* NetworkService.swift */; };
 		756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */; };
 		756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */; };
 		756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756CE30126EFF7250066EBA7 /* Images.xcassets */; };
@@ -72,6 +74,8 @@
 		7545F2F926F69CF80000BD5E /* BestDeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestDeals.swift; sourceTree = "<group>"; };
 		7545F2FB26F69D350000BD5E /* NearYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearYou.swift; sourceTree = "<group>"; };
 		7545F2FD26F69D820000BD5E /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
+		7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		7560E3F126FB6793005181F3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewhelper.swift; sourceTree = "<group>"; };
 		756CE30126EFF7250066EBA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -173,6 +177,14 @@
 			path = BestDealsCollectionView;
 			sourceTree = "<group>";
 		};
+		7560E3F026FB6761005181F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7560E3F126FB6793005181F3 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		756CE2F726EF78A50066EBA7 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,22 +193,22 @@
 			path = FirstViewController;
 			sourceTree = "<group>";
 		};
-		756CE2FA26EF79180066EBA7 /* Delegates */ = {
+		756CE2FA26EF79180066EBA7 /* App delegates */ = {
 			isa = PBXGroup;
 			children = (
 				757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */,
 				757D910826E8FB4D00598DF1 /* AppDelegate.swift */,
 			);
-			path = Delegates;
+			path = "App delegates";
 			sourceTree = "<group>";
 		};
-		756CE2FE26EFDC690066EBA7 /* Helpers */ = {
+		756CE2FE26EFDC690066EBA7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				756CE30126EFF7250066EBA7 /* Images.xcassets */,
 				756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */,
 			);
-			path = Helpers;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		756CE30326F00A5B0066EBA7 /* Data */ = {
@@ -248,10 +260,11 @@
 		757D910726E8FB4D00598DF1 /* Cravyy */ = {
 			isa = PBXGroup;
 			children = (
+				7560E3F026FB6761005181F3 /* Networking */,
 				756CE30326F00A5B0066EBA7 /* Data */,
-				756CE2FA26EF79180066EBA7 /* Delegates */,
+				756CE2FA26EF79180066EBA7 /* App delegates */,
 				757D911926E8FB5300598DF1 /* Info.plist */,
-				756CE2FE26EFDC690066EBA7 /* Helpers */,
+				756CE2FE26EFDC690066EBA7 /* Extension */,
 				75B7B5F126EEA9C9009A5D40 /* Models */,
 				7515547626F4265D002679FB /* Custom Views */,
 				75B7B5EB26EE999A009A5D40 /* Views */,
@@ -330,6 +343,7 @@
 			children = (
 				75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */,
 				75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */,
+				7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */,
 			);
 			path = SecondaryViews;
 			sourceTree = "<group>";
@@ -473,6 +487,7 @@
 				75CB155C26F2982B00E2FC50 /* Preferences.swift in Sources */,
 				757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */,
 				7545F2F226F4C2A00000BD5E /* NearYouCollectionViewCell.swift in Sources */,
+				7560E3F226FB6793005181F3 /* NetworkService.swift in Sources */,
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
 				75CB156526F2C8F500E2FC50 /* RandomViewController.swift in Sources */,
 				75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */,
@@ -483,6 +498,7 @@
 				75CECA4E26FA82DB003EEFF2 /* DetailViewController.swift in Sources */,
 				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
+				7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
 				75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */,

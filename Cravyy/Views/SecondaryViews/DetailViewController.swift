@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var restaurantPhoneNumber: UILabel!
     @IBOutlet weak var restaurantPriceRange: UILabel!
     @IBOutlet weak var restaurantAdress: UILabel!
+    @IBOutlet weak var FavoriteButton: UIButton!
     
     
     //TODO asign functions to all the labels
@@ -56,5 +57,15 @@ class DetailViewController: UIViewController {
         print("open google maps")
     }
     
-
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func starPressed(_ sender: Any) {
+        //TODO switch between "star.fill" and "star" depending on the button current state
+        FavoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    }
+    
+    
+    
 }

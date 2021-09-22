@@ -185,6 +185,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		7560E3F626FBF1D8005181F3 /* JsonModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JsonModels;
+			sourceTree = "<group>";
+		};
 		756CE2F726EF78A50066EBA7 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +324,7 @@
 		75B7B5F126EEA9C9009A5D40 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7560E3F626FBF1D8005181F3 /* JsonModels */,
 				75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */,
 				75CB155B26F2982B00E2FC50 /* Preferences.swift */,
 				7515547D26F426F0002679FB /* Restaurants.swift */,

@@ -23,6 +23,8 @@ class CategoriesViewController: UIViewController {
     
     ]
     
+    var selectedCategory : [restaurantsModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
@@ -54,7 +56,14 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
             print("no id for selected category")
             return
         }
-        print(id)
+        let FetchedRestaurantsVC = storyboard?.instantiateViewController(withIdentifier: "FetchedVC") as! FetchedRestaurantsViewController
+        FetchedRestaurantsVC.restaurantid = id
+        FetchedRestaurantsVC.selectedCat = categories[indexPath.row].name
+        
+        
+        navigationController?.pushViewController(FetchedRestaurantsVC, animated: true)
+        //present(FetchedRestaurantsVC, animated: true, completion: nil)
+        //NetworkService.shared.fetchRestaurantsForCategory(id)
     }
     
     

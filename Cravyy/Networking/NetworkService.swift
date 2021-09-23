@@ -7,12 +7,17 @@
 
 import Foundation
 
+protocol RestaurantsManagerDelegate{
+    
+    func didLoadRestaurants(_ service : NetworkService, restaurants: [restaurantsModel])
+    func didFailedWithError(error:Error)
+}
 
 struct NetworkService{
     
-    static let shared = NetworkService()
+    //static let shared = NetworkService()
     
-  
+    var delegate : RestaurantsManagerDelegate?
     
     
     
@@ -29,14 +34,14 @@ struct NetworkService{
 //
     
     
-    func fetchRestaurantsForCategory(_ id: String){
+     func fetchRestaurantsForCategory(_ id: String){
         
         let headers = [
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
             "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=38.7687&longitude=-9.1622&limit=30&currency=EUR&distance=2&open_now=false&lunit=km&lang=en_US")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=12.91285&longitude=100.87808&limit=30&currency=EUR&combined_food=\(id)&distance=5&open_now=false&lunit=km&lang=en_US")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -58,8 +63,11 @@ struct NetworkService{
                 do{
                     let jsonRestaurants = try decoder.decode(Restaurants.self, from: data!)
                     print(jsonRestaurants)
+                    let restaurantsFetched = jsonRestaurants.data
+                    self.delegate!.didLoadRestaurants(self, restaurants: restaurantsFetched)
                     }catch{
                       print(AppError.errorDecoding)
+                        self.delegate?.didFailedWithError(error: error)
                     }
             }
         })

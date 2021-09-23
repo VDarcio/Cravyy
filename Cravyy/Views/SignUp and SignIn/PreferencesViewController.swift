@@ -15,17 +15,20 @@ class PreferencesViewController: UIViewController {
     var foodsChosen = 0
     
     //items meant to populate tableview
-    var choices : [Preferences] = [
-        .init(foodName: "Burguer", foodImage: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview")),
-        .init(foodName: "pizza", foodImage: #imageLiteral(resourceName: "Untitled design")),
-        .init(foodName: "pasta", foodImage: #imageLiteral(resourceName: "Untitled design copy 2")),
-        .init(foodName: "sushi", foodImage: #imageLiteral(resourceName: "Untitled design copy")),
-        .init(foodName: "nada", foodImage: #imageLiteral(resourceName: "cravyy_Icon-removebg-preview"))
+    var choices : [Category] = [
+        .init(name: "Portuguese", image:UIImage(named: "Portuguese"), id: "10680"),
+        .init(name: "Sushi", image: UIImage(named: "Sushi"), id: "10653"),
+        .init(name: "Italian", image: UIImage(named: "pizza"), id: "4617"),
+        .init(name: "Grill", image: UIImage(named: "Grill"), id: "10651"),
+        .init(name: "Mexican", image: UIImage(named: "mexican"), id: "5110"),
+        .init(name: "Fast Food", image: UIImage(named: "Fast food"), id: "10646"),
+        .init(name: "Brazilian", image: UIImage(named: "brazillian"), id: "10348"),
+        .init(name: "Bar food", image: UIImage(named: "bar food"), id: "10640")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
         
     }
     
@@ -42,10 +45,9 @@ extension PreferencesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"MealsCell", for: indexPath)
-        cell.imageView?.image = choices[indexPath.row].foodImage
-        cell.textLabel?.text = choices[indexPath.row].foodName
-        cell.accessoryType = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier:"CategoryCell", for: indexPath) as! CategoriesTableViewCell
+        cell.setup(choices[indexPath.row])
+        
         
         
         return  cell

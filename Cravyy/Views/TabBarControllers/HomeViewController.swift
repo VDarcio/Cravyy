@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
         ViewAllVC?.modalPresentationStyle = .fullScreen
         ViewAllVC?.modalTransitionStyle = .coverVertical
-        NetworkService.shared.fetchAllRestaurants()
+        //NetworkService.shared.fetchAllRestaurants()
     }
     
     

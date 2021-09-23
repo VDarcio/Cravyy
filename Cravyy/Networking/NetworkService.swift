@@ -29,10 +29,7 @@ struct NetworkService{
 //
     
     
-    
-    
-    
-    func fetchAllRestaurants(){
+    func fetchRestaurantsForCategory(_ id: String){
         
         let headers = [
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
@@ -71,14 +68,56 @@ struct NetworkService{
         
         
     }
-    func parse(Json:Data){
-        
-       
         
         
         
         
-    }
+    
+    
+    
+    
+    
+    
+//    func fetchAllRestaurants(){
+//
+//        let headers = [
+//            "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
+//            "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
+//        ]
+//
+//        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=38.7687&longitude=-9.1622&limit=30&currency=EUR&distance=2&open_now=false&lunit=km&lang=en_US")! as URL,
+//                                                cachePolicy: .useProtocolCachePolicy,
+//                                            timeoutInterval: 10.0)
+//        request.httpMethod = "GET"
+//        request.allHTTPHeaderFields = headers
+//
+//        let session = URLSession.shared
+//        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+//            if (error != nil) {
+//                print(error)
+//            } else {
+//                let httpResponse = response as? HTTPURLResponse
+//                print(httpResponse)
+////                let responseString = String(data : data!, encoding: .utf8) ?? "could not turn into a string"
+////                print("response = \(responseString)")
+//                let decoder = JSONDecoder()
+//                guard data != nil else{
+//                    print(AppError.serverError("no data"))
+//                    return}
+//                do{
+//                    let jsonRestaurants = try decoder.decode(Restaurants.self, from: data!)
+//                    print(jsonRestaurants)
+//                    }catch{
+//                      print(AppError.errorDecoding)
+//                    }
+//            }
+//        })
+//
+//        dataTask.resume()
+//
+//
+//    }
+   
     
     
     

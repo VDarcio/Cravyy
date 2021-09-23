@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class FetchedRestaurantsViewController: UIViewController {
 
@@ -25,7 +26,7 @@ class FetchedRestaurantsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        ProgressHUD.show()
         networkservice.delegate = self
         tableview.register(UINib(nibName: "FetchedRestaurantsTableViewCell", bundle: nil), forCellReuseIdentifier: "FetchedCell")
         networkservice.fetchRestaurantsForCategory(restaurantid!)
@@ -49,7 +50,7 @@ extension FetchedRestaurantsViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FetchedCell", for: indexPath ) as! FetchedRestaurantsTableViewCell
-        cell.accessoryType = .disclosureIndicator
+        //cell.accessoryType = .disclosureIndicator
         cell.setup(restaurants[indexPath.row])
         return cell
     }
@@ -65,11 +66,13 @@ extension FetchedRestaurantsViewController: RestaurantsManagerDelegate{
         DispatchQueue.main.async {
             self.tableview.reloadData()
             self.title = self.selectedCat
+            ProgressHUD.dismiss()
         }
         
     }
     
     func didFailedWithError(error: Error) {
+        ProgressHUD.showError(error.localizedDescription)
         print(error)
     }
     

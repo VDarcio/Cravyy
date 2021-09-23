@@ -28,7 +28,7 @@ struct Photo:Codable{
 }
 
 struct Images:Codable{
-    var small: imageSize?
+    var original: imageSize?
     
 }
 struct imageSize: Codable {

@@ -10,7 +10,7 @@ import ProgressHUD
 
 class FetchedRestaurantsViewController: UIViewController {
 
-    @IBOutlet weak var VCtitle: UILabel!
+    
     @IBOutlet weak var tableview: UITableView!
     
     var networkservice = NetworkService()
@@ -44,7 +44,6 @@ class FetchedRestaurantsViewController: UIViewController {
 
 extension FetchedRestaurantsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("------------------------\(restaurants.count)--------------------")
         return restaurants.count
     }
     
@@ -55,7 +54,13 @@ extension FetchedRestaurantsViewController: UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        detailVC.restaurant = restaurants[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
     
 }
 

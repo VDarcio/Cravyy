@@ -41,7 +41,7 @@ struct NetworkService{
             "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=12.91285&longitude=100.87808&limit=30&currency=EUR&combined_food=\(id)&distance=5&open_now=false&lunit=km&lang=en_US")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=38.7687&longitude=-9.16228&limit=30&currency=EUR&combined_food=\(id)&distance=5&open_now=false&lunit=km&lang=en_US")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"

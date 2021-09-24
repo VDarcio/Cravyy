@@ -660,32 +660,13 @@
         <!--Detail View Controller-->
         <scene sceneID="2LY-Oi-Viz">
             <objects>
-                <viewController id="TCV-Et-KIh" customClass="DetailViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="TCV-Et-KIh" customClass="DetailViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ksn-Wl-2YR">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-fr-DAD">
-                                <rect key="frame" x="20" y="44" width="19.666666666666671" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="Ba7-li-VfY"/>
-                                    <constraint firstAttribute="width" constant="19.670000000000002" id="Q1G-rU-4xV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="arrow.backward" catalog="system"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="TCV-Et-KIh" eventType="touchUpInside" id="L7c-Rz-zc5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ5-oh-f7o">
-                                <rect key="frame" x="194.66666666666666" y="44" width="39" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-eT-8N3">
-                                <rect key="frame" x="0.0" y="68" width="428" height="858"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UJ-1Q-KGH">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="900"/>
@@ -735,7 +716,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zr4-C6-JKC">
-                                                <rect key="frame" x="20" y="486.66666666666663" width="380" height="120"/>
+                                                <rect key="frame" x="20" y="486.66666666666674" width="380" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-dn-DiK">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="24"/>
@@ -874,36 +855,17 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="WFw-UW-CdK"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ETL-YZ-PCo"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-6K-iV3">
-                                <rect key="frame" x="361.66666666666669" y="37.333333333333336" width="46.333333333333314" height="30.666666666666664"/>
-                                <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=" "/>
-                                <connections>
-                                    <action selector="starPressed:" destination="TCV-Et-KIh" eventType="touchUpInside" id="KEB-mu-NS5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cY2-vw-6ii"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r9g-fr-DAD" firstAttribute="leading" secondItem="cY2-vw-6ii" secondAttribute="leading" constant="20" id="BUL-LT-e4f"/>
-                            <constraint firstItem="r9g-fr-DAD" firstAttribute="top" secondItem="cY2-vw-6ii" secondAttribute="top" id="DkE-SY-l4L"/>
-                            <constraint firstItem="XC9-6K-iV3" firstAttribute="height" secondItem="r9g-fr-DAD" secondAttribute="height" multiplier="1.27778" id="G71-aA-IzQ"/>
                             <constraint firstItem="FnT-eT-8N3" firstAttribute="leading" secondItem="cY2-vw-6ii" secondAttribute="leading" id="MmB-Sc-Wu1"/>
-                            <constraint firstItem="iQ5-oh-f7o" firstAttribute="centerX" secondItem="Ksn-Wl-2YR" secondAttribute="centerX" id="T02-gT-MbF"/>
                             <constraint firstAttribute="bottom" secondItem="FnT-eT-8N3" secondAttribute="bottom" id="Wqf-zg-PVr"/>
-                            <constraint firstItem="FnT-eT-8N3" firstAttribute="top" secondItem="XC9-6K-iV3" secondAttribute="bottom" id="XAd-9l-aqz"/>
                             <constraint firstAttribute="trailing" secondItem="FnT-eT-8N3" secondAttribute="trailing" id="XfQ-Pk-jca"/>
-                            <constraint firstItem="XC9-6K-iV3" firstAttribute="width" secondItem="r9g-fr-DAD" secondAttribute="width" multiplier="2.35593" id="oJc-5t-L9N"/>
-                            <constraint firstItem="cY2-vw-6ii" firstAttribute="trailing" secondItem="XC9-6K-iV3" secondAttribute="trailing" constant="20" id="slr-8I-07U"/>
-                            <constraint firstItem="FnT-eT-8N3" firstAttribute="top" secondItem="r9g-fr-DAD" secondAttribute="bottom" id="urc-8T-hwC"/>
-                            <constraint firstItem="iQ5-oh-f7o" firstAttribute="top" secondItem="cY2-vw-6ii" secondAttribute="top" id="zni-G9-IZV"/>
+                            <constraint firstItem="FnT-eT-8N3" firstAttribute="top" secondItem="Ksn-Wl-2YR" secondAttribute="top" id="bFF-7j-pFj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="FavoriteButton" destination="XC9-6K-iV3" id="lDR-Jq-F14"/>
-                        <outlet property="VCtitle" destination="iQ5-oh-f7o" id="NuW-Tb-LEi"/>
                         <outlet property="isOpenLabel" destination="ZyD-LB-COk" id="htP-c4-jTK"/>
                         <outlet property="restaurantAdress" destination="zkl-85-FWe" id="0c5-fi-alm"/>
                         <outlet property="restaurantDescription" destination="tnB-z3-Jov" id="S0t-Rc-fFN"/>
@@ -1103,7 +1065,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-yi-Vs9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="230" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-yi-Vs9">
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -1486,7 +1448,6 @@
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

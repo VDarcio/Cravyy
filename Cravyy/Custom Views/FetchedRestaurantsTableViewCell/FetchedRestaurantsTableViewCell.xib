@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-cO-Glw">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-cO-Glw" customClass="CardView" customModule="Cravyy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="378" height="249"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FyV-4G-xLX">

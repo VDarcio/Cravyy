@@ -31,7 +31,9 @@ class DetailViewController: UIViewController {
     //TODO asign functions to all the labels
     override func viewDidLoad() {
         super.viewDidLoad()
+        ProgressHUD.show()
         VcSetup()
+        checkStatus()
        
         //create gestures
         let phoneNumberTapped = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.CallRestaurant))
@@ -44,17 +46,40 @@ class DetailViewController: UIViewController {
         
     
     }
+    func checkStatus(){
+        if restaurant?.open_now_text == nil{
+            isOpenLabel.alpha = 0.0
+        }else if restaurant?.open_now_text != "Open Now"{
+            isOpenLabel.backgroundColor = .red
+        }
+        if restaurant?.description == ""{
+            restaurantDescription.text = "Restaurant has no information, we recommend visiting the website below"
+        }
+        if restaurant?.price == nil{
+            restaurantPriceRange.alpha = 0.0
+        }
+        if restaurant?.rating ==  nil{
+            restaurantRating.alpha = 0.0
+        }
+        if restaurant?.website ==  nil{
+            webSiteLabel.alpha = 0.0
+        }
+        ProgressHUD.dismiss()
+       
+    }
+    
     
     func VcSetup(){
+        guard restaurant != nil else {return}
         restaurantImageView.kf.setImage(with: restaurant?.photo?.images?.original?.url?.asURL)
         restaurantName.text = restaurant?.name
         isOpenLabel.text = restaurant?.open_now_text
-        restaurantRating.text = restaurant?.rating
-        restaurantDistance.text = restaurant?.distance_string
+        restaurantRating.text = "⭐️\(restaurant?.rating ?? "")/5"
+        restaurantDistance.text = "📍\(restaurant?.distance_string ?? "")"
         restaurantDescription.text = restaurant?.description
         webSiteLabel.text = restaurant?.website
         restaurantPhoneNumber.text = restaurant?.phone
-        restaurantPriceRange.text = restaurant?.price
+        restaurantPriceRange.text = "💶\(restaurant?.price ?? "")"
         restaurantAdress.text = restaurant?.address
         
         

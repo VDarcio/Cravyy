@@ -700,13 +700,13 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️ 8/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHR-ll-45a">
                                                         <rect key="frame" x="0.0" y="0.0" width="190" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,27 km 📍" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFy-4X-Nyd">
                                                         <rect key="frame" x="190" y="0.0" width="190.33333333333337" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -738,24 +738,30 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-TJ-ah4">
-                                                <rect key="frame" x="20.000000000000007" y="616.66666666666663" width="102.66666666666669" height="58.333333333333371"/>
+                                                <rect key="frame" x="20" y="626.66666666666663" width="170" height="88.666666666666629"/>
                                                 <subviews>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-fZ-qXU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb4-Db-pAM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-fZ-qXU">
+                                                        <rect key="frame" x="0.0" y="25.333333333333371" width="85.666666666666671" height="17"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Visit WebSite">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.15686274509803921" green="1" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvl-Yb-VuQ">
-                                                        <rect key="frame" x="0.0" y="22" width="94.333333333333329" height="17"/>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvl-Yb-VuQ">
+                                                        <rect key="frame" x="0.0" y="47.333333333333371" width="94.333333333333329" height="17"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Phone number">
                                                                 <attributes>
@@ -769,24 +775,24 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-Iu-0bQ">
-                                                        <rect key="frame" x="0.0" y="44" width="68" height="14.333333333333336"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="0.0" y="69.333333333333371" width="87" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OOg-PM-MKk">
-                                                <rect key="frame" x="222.66666666666663" y="616.66666666666663" width="177.33333333333337" height="73"/>
+                                                <rect key="frame" x="220" y="626.66666666666663" width="180" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f0-8G-8Xr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.33333333333334" height="20.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkl-85-FWe">
-                                                        <rect key="frame" x="0.0" y="20.333333333333368" width="177.33333333333334" height="52.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="20.333333333333368" width="180" height="52.666666666666657"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Rua doutor jose da cunha 18, 1750-044, Lumiar, Lisboa">
                                                                 <attributes>
@@ -803,7 +809,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIm-vL-6EP">
-                                                <rect key="frame" x="100" y="739.66666666666663" width="220" height="33"/>
+                                                <rect key="frame" x="100" y="735.33333333333337" width="220" height="33"/>
                                                 <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <state key="normal" title="Get there">
@@ -819,18 +825,18 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oIm-vL-6EP" secondAttribute="trailing" constant="100" id="1bF-O3-0BY"/>
-                                            <constraint firstItem="oIm-vL-6EP" firstAttribute="top" secondItem="OOg-PM-MKk" secondAttribute="bottom" constant="50" id="1eN-Wh-1Ru"/>
                                             <constraint firstItem="uEm-L0-dEy" firstAttribute="leading" secondItem="0UJ-1Q-KGH" secondAttribute="leading" constant="20" id="3Qf-yn-TWE"/>
+                                            <constraint firstItem="OOg-PM-MKk" firstAttribute="leading" secondItem="0UJ-1Q-KGH" secondAttribute="leading" constant="220" id="7pi-dM-OE3"/>
                                             <constraint firstAttribute="trailing" secondItem="u55-CI-Kga" secondAttribute="trailing" id="9zj-pF-WOZ"/>
-                                            <constraint firstItem="OOg-PM-MKk" firstAttribute="leading" secondItem="gQ9-TJ-ah4" secondAttribute="trailing" constant="100" id="E2h-yL-HUK"/>
+                                            <constraint firstItem="oIm-vL-6EP" firstAttribute="top" secondItem="gQ9-TJ-ah4" secondAttribute="bottom" constant="20" id="Bcj-OG-Ekq"/>
                                             <constraint firstItem="ZyD-LB-COk" firstAttribute="leading" secondItem="0UJ-1Q-KGH" secondAttribute="leading" constant="100" id="E8U-ze-063"/>
                                             <constraint firstAttribute="trailing" secondItem="ZyD-LB-COk" secondAttribute="trailing" constant="100" id="E9w-f1-PDM"/>
                                             <constraint firstItem="JeJ-YM-N4W" firstAttribute="top" secondItem="uEm-L0-dEy" secondAttribute="bottom" constant="20" id="EcX-Vn-iGD"/>
-                                            <constraint firstItem="gQ9-TJ-ah4" firstAttribute="top" secondItem="zr4-C6-JKC" secondAttribute="bottom" constant="10" id="F1U-Rd-SFf"/>
+                                            <constraint firstItem="gQ9-TJ-ah4" firstAttribute="top" secondItem="zr4-C6-JKC" secondAttribute="bottom" constant="20" id="F1U-Rd-SFf"/>
                                             <constraint firstAttribute="height" constant="900" id="IVE-h2-eNH"/>
                                             <constraint firstItem="u55-CI-Kga" firstAttribute="leading" secondItem="0UJ-1Q-KGH" secondAttribute="leading" id="KXA-sD-ume"/>
                                             <constraint firstAttribute="trailing" secondItem="uEm-L0-dEy" secondAttribute="trailing" constant="20" id="Qcn-AW-8pY"/>
-                                            <constraint firstItem="OOg-PM-MKk" firstAttribute="top" secondItem="zr4-C6-JKC" secondAttribute="bottom" constant="10" id="WaU-9c-Ylf"/>
+                                            <constraint firstItem="OOg-PM-MKk" firstAttribute="top" secondItem="zr4-C6-JKC" secondAttribute="bottom" constant="20" id="WaU-9c-Ylf"/>
                                             <constraint firstItem="ZyD-LB-COk" firstAttribute="top" secondItem="u55-CI-Kga" secondAttribute="bottom" constant="20" id="XFo-rs-klN"/>
                                             <constraint firstAttribute="trailing" secondItem="JeJ-YM-N4W" secondAttribute="trailing" constant="20" id="ctl-fa-uU4"/>
                                             <constraint firstAttribute="trailing" secondItem="zr4-C6-JKC" secondAttribute="trailing" constant="20" id="dxY-Ev-q0a"/>
@@ -842,6 +848,7 @@
                                             <constraint firstItem="JeJ-YM-N4W" firstAttribute="leading" secondItem="0UJ-1Q-KGH" secondAttribute="leading" constant="20" id="neH-8S-wcK"/>
                                             <constraint firstItem="oIm-vL-6EP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0UJ-1Q-KGH" secondAttribute="leading" constant="100" id="oYo-gj-4ae"/>
                                             <constraint firstAttribute="trailing" secondItem="OOg-PM-MKk" secondAttribute="trailing" constant="20" id="thq-Ha-1Kl"/>
+                                            <constraint firstAttribute="trailing" secondItem="gQ9-TJ-ah4" secondAttribute="trailing" constant="230" id="uBp-Bd-Evx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1103,17 +1110,34 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-ju-9Eq">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ0-Uz-dtC">
+                                <rect key="frame" x="358" y="64" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="YlV-Go-WaH"/>
+                                    <constraint firstAttribute="height" constant="50" id="ztM-RE-ch3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="locatePressed:" destination="8yi-is-nSR" eventType="touchUpInside" id="MVB-MM-boC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4gL-nK-f59"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OUl-ju-9Eq" firstAttribute="leading" secondItem="BUt-lf-dE9" secondAttribute="leading" id="QrW-za-uHV"/>
+                            <constraint firstItem="BJ0-Uz-dtC" firstAttribute="top" secondItem="4gL-nK-f59" secondAttribute="top" constant="20" id="bwj-Sk-TfI"/>
+                            <constraint firstItem="4gL-nK-f59" firstAttribute="trailing" secondItem="BJ0-Uz-dtC" secondAttribute="trailing" constant="20" id="nAl-Sq-TKO"/>
                             <constraint firstAttribute="bottom" secondItem="OUl-ju-9Eq" secondAttribute="bottom" id="qT5-RX-vlz"/>
                             <constraint firstAttribute="trailing" secondItem="OUl-ju-9Eq" secondAttribute="trailing" id="rCI-1k-fdc"/>
                             <constraint firstItem="OUl-ju-9Eq" firstAttribute="top" secondItem="BUt-lf-dE9" secondAttribute="top" id="sbt-4L-Ekq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="mZ1-4W-30J"/>
+                    <connections>
+                        <outlet property="mapView" destination="OUl-ju-9Eq" id="VKV-vS-2Qj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYs-lH-j4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1138,6 +1162,9 @@
                                         </constraints>
                                         <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="mappin.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="locatePressed:" destination="KOb-QE-J0w" eventType="touchUpInside" id="XDG-eq-FAa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cairo, Egipto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGi-fG-yVu">
                                         <rect key="frame" x="60" y="0.0" width="308" height="50"/>
@@ -1446,6 +1473,7 @@
         <image name="cravyy_Icon-removebg-preview" width="250" height="250"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">

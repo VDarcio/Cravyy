@@ -11,6 +11,7 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
+    //Load all categories
     var categories : [Category] = [
         .init(name: "Portuguese", image:UIImage(named: "Portuguese"), id: "10680"),
         .init(name: "Sushi", image: UIImage(named: "Sushi"), id: "10653"),
@@ -52,18 +53,17 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+       //get a reference to the category id to be used later
         guard let id = categories[indexPath.row].id else{
             print("no id for selected category")
             return
         }
+        //use category id to fetch restaurants from the backend
         let FetchedRestaurantsVC = storyboard?.instantiateViewController(withIdentifier: "FetchedVC") as! FetchedRestaurantsViewController
         FetchedRestaurantsVC.restaurantid = id
         FetchedRestaurantsVC.selectedCat = categories[indexPath.row].name
-        
-        
         navigationController?.pushViewController(FetchedRestaurantsVC, animated: true)
-        //present(FetchedRestaurantsVC, animated: true, completion: nil)
-        //NetworkService.shared.fetchRestaurantsForCategory(id)
+        
     }
     
     

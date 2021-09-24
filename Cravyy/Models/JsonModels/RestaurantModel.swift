@@ -6,7 +6,9 @@
 //
 
 import Foundation
+//Decodable Process
 
+//2nd
 struct restaurantsModel: Codable{
     var name, description, open_now_text,latitude,longitude, phone, website, address, price, rating, distance_string: String?
    var photo : Photo?
@@ -14,15 +16,14 @@ struct restaurantsModel: Codable{
    
    
 }
-
+//1st
 struct Restaurants: Codable{
     var data: [restaurantsModel]
     
 }
 
 struct Photo:Codable{
-   // var images: images
-    //var uploaded_date: String //?
+   
     var images: Images?
    
 }

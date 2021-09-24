@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//Protocol that ViewController must conform as the delegate to get the data
 protocol RestaurantsManagerDelegate{
     
     func didLoadRestaurants(_ service : NetworkService, restaurants: [restaurantsModel])
@@ -15,35 +15,20 @@ protocol RestaurantsManagerDelegate{
 
 struct NetworkService{
     
-    //static let shared = NetworkService()
-    
+   //delegate that viewcontroller must declare as self to acess this class
     var delegate : RestaurantsManagerDelegate?
     
-    
-    
-//    struct images:Codable{
-//
-//        var small:small
-//    }
-//
-//
-//    struct small:Codable{
-//
-//        var url:String?
-//    }
-//
-    
-    
-     func fetchRestaurantsForCategory(_ id: String){
+    //Method called from FetchedRestaurantsViewController to fetch all the restaurats from a specific category using the id of the category
+    func fetchRestaurantsForCategory( id: String, lat :Double, lon :Double){
         
         let headers = [
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
             "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=38.7687&longitude=-9.16228&limit=30&currency=EUR&combined_food=\(id)&distance=5&open_now=false&lunit=km&lang=en_US")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=\(lat)&longitude=\(lon)&limit=30&currency=EUR&combined_food=\(id)&distance=5&open_now=false&lunit=km&lang=en_US")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                      timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
 
@@ -53,17 +38,23 @@ struct NetworkService{
                 print(error)
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
+                //print(httpResponse)
 //                let responseString = String(data : data!, encoding: .utf8) ?? "could not turn into a string"
 //                print("response = \(responseString)")
+                
+                //initialize decoder
                 let decoder = JSONDecoder()
+                //make sure that is data
                 guard data != nil else{
                     print(AppError.serverError("no data"))
                     return}
                 do{
+                    //decode the data into a restaurantmodel object
                     let jsonRestaurants = try decoder.decode(Restaurants.self, from: data!)
                     print(jsonRestaurants)
+                    // declare decoded data to a constant
                     let restaurantsFetched = jsonRestaurants.data
+                    //call the delegate (FetchedRestaurantsViewController) and pass the data to it
                     self.delegate!.didLoadRestaurants(self, restaurants: restaurantsFetched)
                     }catch{
                       print(AppError.errorDecoding)

@@ -29,7 +29,7 @@ class FetchedRestaurantsViewController: UIViewController {
         ProgressHUD.show()
         networkservice.delegate = self
         tableview.register(UINib(nibName: "FetchedRestaurantsTableViewCell", bundle: nil), forCellReuseIdentifier: "FetchedCell")
-        networkservice.fetchRestaurantsForCategory(restaurantid!)
+        networkservice.fetchRestaurantsForCategory(id: restaurantid!, lat: HomeViewController.latitude!, lon: HomeViewController.longitude!)
         
         
         

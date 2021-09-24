@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeViewController: UIViewController {
 
@@ -13,6 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var nearYouCollectionView: UICollectionView!
     @IBOutlet weak var BestDealsCollectionView: UICollectionView!
     var ViewAllVC : ViewAllViewViewController?
+    var locationManager = CLLocationManager()
+    
+    static var latitude : Double?
+    static var longitude : Double?
+    
     
     
     //All arrays
@@ -40,6 +46,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate=self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        
         registerCells()
        //Instantiate ViewController that presents All the items
         ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
@@ -48,6 +59,9 @@ class HomeViewController: UIViewController {
         //NetworkService.shared.fetchAllRestaurants()
     }
     
+    @IBAction func locatePressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
     
    
         
@@ -145,7 +159,28 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
    
     }
  
+//MARK:-Location Manager
+
+extension HomeViewController:CLLocationManagerDelegate{
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            HomeViewController.latitude = lat
+            HomeViewController.longitude = lon
+            
+            
+            
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+}
     
     
     

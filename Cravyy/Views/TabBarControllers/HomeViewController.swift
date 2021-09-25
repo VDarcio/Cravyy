@@ -9,13 +9,15 @@ import UIKit
 import CoreLocation
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var featuredCollectionView: UICollectionView!
     @IBOutlet weak var nearYouCollectionView: UICollectionView!
     @IBOutlet weak var BestDealsCollectionView: UICollectionView!
     var ViewAllVC : ViewAllViewViewController?
     var locationManager = CLLocationManager()
     
+    
+    //static vars to be acessed from fetchedrestaurantsVc to send cordinates to networkservice
     static var latitude : Double?
     static var longitude : Double?
     
@@ -46,13 +48,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //request user location
         locationManager.delegate=self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
         
         registerCells()
-       //Instantiate ViewController that presents All the items
+        //Instantiate ViewController that presents All the items
         ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
         ViewAllVC?.modalPresentationStyle = .fullScreen
         ViewAllVC?.modalTransitionStyle = .coverVertical
@@ -63,8 +66,8 @@ class HomeViewController: UIViewController {
         locationManager.requestLocation()
     }
     
-   
-        
+    
+    
     @IBAction func viewAllPressed(_ sender: UIButton) {
         //switch thru all tags (0,1,2) to decide the information to be sent to the ViewAllViewController
         switch sender.tag{
@@ -74,33 +77,30 @@ class HomeViewController: UIViewController {
             // set VC's tag as the same as our button
             ViewAllVC?.tag = sender.tag
             // Pass information according to our tag
-             ViewAllVC?.featured = featured
+            ViewAllVC?.featured = featured
         case 1 :
             present(ViewAllVC!, animated: true, completion: nil)
-             ViewAllVC?.tag = sender.tag
-             ViewAllVC?.nearYou = nearYou
+            ViewAllVC?.tag = sender.tag
+            ViewAllVC?.nearYou = nearYou
         case 2:
             present(ViewAllVC!, animated: true, completion: nil)
-             ViewAllVC?.tag = sender.tag
-             ViewAllVC?.bestDeals = bestDeals
-         default : return
+            ViewAllVC?.tag = sender.tag
+            ViewAllVC?.bestDeals = bestDeals
+        default : return
         }
         
-      
-    
+        
+        
         
     }
     
-   
     
-
-
+    
+    
+    
 }
 //MARK:-TableView Delegates and dataSource
 extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    
-    
     
     //Register UiNib for every created cell
     func registerCells(){
@@ -123,11 +123,10 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
             return nearYou.count
         case BestDealsCollectionView:
             return bestDeals.count
-        
+            
         default:
             return 0
         }
-        
         
         
     }
@@ -150,15 +149,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
             return UICollectionViewCell()
         }
         
-        
-        
-        
-        
     }
     
-   
-    }
- 
+    
+}
+
 //MARK:-Location Manager
 
 extension HomeViewController:CLLocationManagerDelegate{
@@ -177,15 +172,15 @@ extension HomeViewController:CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        print("error locating\(error)")
     }
     
 }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 

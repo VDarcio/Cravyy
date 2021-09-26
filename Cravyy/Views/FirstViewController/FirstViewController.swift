@@ -15,6 +15,7 @@ class FirstViewController: UIViewController {
     
    private var signUpVC :SignUpViewController?
    private var loginVC: LoginViewController?
+    private var tabBarVC : MainTabBarController?
     
     
    
@@ -26,6 +27,7 @@ class FirstViewController: UIViewController {
          //instantiateViews
         signUpVC = storyboard?.instantiateViewController(identifier: "SignUpVC") as? SignUpViewController
         loginVC = storyboard?.instantiateViewController(identifier: "LoginVC") as? LoginViewController
+        tabBarVC = storyboard?.instantiateViewController(withIdentifier: "tabBarVC") as? MainTabBarController
         
       
         
@@ -53,7 +55,16 @@ class FirstViewController: UIViewController {
     }
     
     
-   
+    @IBAction func skipTapped(_ sender: UIButton) {
+        if tabBarVC != nil{
+            tabBarVC!.modalPresentationStyle = .fullScreen
+            tabBarVC!.modalTransitionStyle = .flipHorizontal
+            present(tabBarVC!, animated: true, completion: nil)
+            
+            
+        }
+    }
+    
     
    
   

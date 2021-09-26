@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NearYouCollectionViewCell: UICollectionViewCell {
 
@@ -15,10 +16,15 @@ class NearYouCollectionViewCell: UICollectionViewCell {
     
     
     
-    func setup(_ nearYou:Nearyou){
+    func setup(_ nearYou:restaurantsModel){
+        
         restarauntsName.text = nearYou.name
-        restarauntsDistance.text = nearYou.distance
-        restarauntsImageView.image = nearYou.image
+        restarauntsDistance.text = "📍\(nearYou.distance_string ?? "")"
+        if nearYou.photo?.images?.original?.url != nil{
+            restarauntsImageView.kf.setImage(with: nearYou.photo?.images?.original?.url?.asURL)
+        }else{
+            restarauntsImageView.image = UIImage(named: "brazillian")
+        }
         
     }
     

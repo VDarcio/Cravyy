@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-Le-Lvh" customClass="CardView" customModule="Cravyy" customModuleProvider="target">
                         <rect key="frame" x="5" y="5" width="190" height="290"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-9j-Tho">
-                                <rect key="frame" x="5" y="5" width="180" height="280"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-9j-Tho">
+                                <rect key="frame" x="5" y="5" width="180" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A casa do pai dealguem grande aqui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-la-Lki">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="72"/>
@@ -30,24 +31,32 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants price range" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhh-o5-fS7">
-                                        <rect key="frame" x="0.0" y="77" width="180" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="72" width="180" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7W-q1-o7I">
-                                        <rect key="frame" x="0.0" y="101.5" width="180" height="178.5"/>
-                                    </imageView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7W-q1-o7I">
+                                <rect key="frame" x="5" y="101.5" width="180" height="183.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="l9P-R1-fAo"/>
+                                    <constraint firstAttribute="height" constant="183.5" id="wQA-zh-ixf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IRe-9j-Tho" firstAttribute="leading" secondItem="EhS-Le-Lvh" secondAttribute="leading" constant="5" id="Gbz-pQ-qaY"/>
-                            <constraint firstAttribute="trailing" secondItem="IRe-9j-Tho" secondAttribute="trailing" constant="5" id="Hz8-2Q-o1E"/>
+                            <constraint firstAttribute="width" constant="190" id="3r8-mj-oTq"/>
+                            <constraint firstItem="IRe-9j-Tho" firstAttribute="top" secondItem="EhS-Le-Lvh" secondAttribute="top" constant="5" id="Bcj-dM-nAa"/>
+                            <constraint firstAttribute="trailing" secondItem="b7W-q1-o7I" secondAttribute="trailing" constant="5" id="C4o-4v-nr2"/>
+                            <constraint firstItem="b7W-q1-o7I" firstAttribute="top" secondItem="IRe-9j-Tho" secondAttribute="bottom" constant="5" id="DNI-1R-7IU"/>
+                            <constraint firstAttribute="bottom" secondItem="b7W-q1-o7I" secondAttribute="bottom" constant="5" id="ZT5-2a-nEE"/>
                             <constraint firstAttribute="height" constant="290" id="azo-sL-7mz"/>
-                            <constraint firstItem="IRe-9j-Tho" firstAttribute="top" secondItem="EhS-Le-Lvh" secondAttribute="top" constant="5" id="u8o-xs-XpA"/>
-                            <constraint firstAttribute="bottom" secondItem="IRe-9j-Tho" secondAttribute="bottom" constant="5" id="vWo-3x-UDd"/>
+                            <constraint firstAttribute="trailing" secondItem="IRe-9j-Tho" secondAttribute="trailing" constant="5" id="pCk-3b-QLV"/>
+                            <constraint firstItem="IRe-9j-Tho" firstAttribute="leading" secondItem="EhS-Le-Lvh" secondAttribute="leading" constant="5" id="rpy-S4-Fha"/>
+                            <constraint firstItem="b7W-q1-o7I" firstAttribute="leading" secondItem="EhS-Le-Lvh" secondAttribute="leading" constant="5" id="wgg-rK-zhp"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,11 +69,11 @@
                 <constraint firstItem="EhS-Le-Lvh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="flI-MQ-3rl"/>
             </constraints>
             <connections>
-                <outlet property="restaurantsImage" destination="b7W-q1-o7I" id="GbQ-3s-wgp"/>
+                <outlet property="restaurantsImage" destination="b7W-q1-o7I" id="HC8-lA-bQP"/>
                 <outlet property="restaurantsName" destination="aCe-la-Lki" id="fXh-Yp-RwF"/>
                 <outlet property="restaurantsPrice" destination="Hhh-o5-fS7" id="bxY-rG-qzF"/>
             </connections>
-            <point key="canvasLocation" x="-42.028985507246382" y="78.348214285714278"/>
+            <point key="canvasLocation" x="-457" y="93"/>
         </collectionViewCell>
     </objects>
     <resources>

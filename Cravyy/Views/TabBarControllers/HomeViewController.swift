@@ -50,34 +50,7 @@ class HomeViewController: UIViewController {
         ViewAllVC?.modalPresentationStyle = .fullScreen
         ViewAllVC?.modalTransitionStyle = .coverVertical
         
-        //Call networkservice to fetch all restaurants and place the data on all categories
-        NetworkService.fetchAllRestaurants(latitude: 38.7687, Longitude: -9.1622) { restaurantsfetched in
-            
-          //  let featuredrestaurants = restaurantsfetched?.filter({$0.rating.})
-            
-           
-          
-            
-            
-            
-            DispatchQueue.main.async {
-                //divide the data in all categories
-                self.featured = restaurantsfetched!
-                self.nearYou = restaurantsfetched!
-                self.bestDeals = restaurantsfetched!
-                self.reloadViews()
-                
-                //call method to get location name
-                self.lookUpCurrentLocation { placemark in
-                    //display location name to the user
-                    self.locationLabel.text = placemark?.name
-                  
-                    
-                }
-                
-                ProgressHUD.dismiss()
-            }
-        }
+       
     
     }
     //method to reload all the collectionviewa
@@ -201,7 +174,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 //MARK:-Location Manager
 
 extension HomeViewController:CLLocationManagerDelegate{
-    
+    //this method is called everytime the location is requested, it updates the location and calls the api to fetch restaurants in the area
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             locationManager.stopUpdatingLocation()
@@ -209,6 +182,32 @@ extension HomeViewController:CLLocationManagerDelegate{
             let lon = location.coordinate.longitude
             HomeViewController.latitude = lat
             HomeViewController.longitude = lon
+            
+            //Call networkservice to fetch all restaurants and place the data on all categories
+            NetworkService.fetchAllRestaurants(latitude: lat, Longitude: lon) { restaurantsfetched in
+                
+                //filter the array and separate the top rated restaurants
+                let featuredret = restaurantsfetched?.filter({$0.rating == "5.0" || $0.rating == "4.9" || $0.rating == "4.8" || $0.rating == "4.7" || $0.rating == "4.6" || $0.rating == "4.5" || $0.rating == "4.4" || $0.rating == "4.3" || $0.rating == "4.2" || $0.rating == "4.1" || $0.rating == "4.0"})
+                
+            //update UI
+                DispatchQueue.main.async {
+                    //divide the data in all categories
+                    self.featured = featuredret!
+                    self.nearYou = restaurantsfetched!
+                    self.bestDeals = restaurantsfetched!
+                    self.reloadViews()
+                    
+                    //call method to get location name
+                    self.lookUpCurrentLocation { placemark in
+                        //display location name to the user
+                        self.locationLabel.text = placemark?.name
+                      
+                        
+                    }
+                    
+                    ProgressHUD.dismiss()
+                }
+            }
             
             
             

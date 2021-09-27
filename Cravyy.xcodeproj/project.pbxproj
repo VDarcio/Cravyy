@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */; };
 		750BD94027020FFB0039379E /* ViewAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */; };
+		750BD942270233E70039379E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD941270233E70039379E /* NetworkService.swift */; };
 		7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */; };
 		7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */; };
 		7515548526F42B51002679FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515548426F42B51002679FB /* CardView.swift */; };
@@ -27,7 +28,6 @@
 		7545F2FC26F69D350000BD5E /* NearYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F2FB26F69D350000BD5E /* NearYou.swift */; };
 		7545F2FE26F69D820000BD5E /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F2FD26F69D820000BD5E /* Featured.swift */; };
 		7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */; };
-		7560E3F226FB6793005181F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3F126FB6793005181F3 /* NetworkService.swift */; };
 		7560E3F826FC0868005181F3 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3F726FC0868005181F3 /* RestaurantModel.swift */; };
 		7560E3FA26FC0CAC005181F3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E3F926FC0CAC005181F3 /* AppError.swift */; };
 		756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */; };
@@ -83,6 +83,7 @@
 		4B04C1379DE3898E709D827E /* Pods-CravyyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CravyyTests.release.xcconfig"; path = "Target Support Files/Pods-CravyyTests/Pods-CravyyTests.release.xcconfig"; sourceTree = "<group>"; };
 		750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllTableViewCell.swift; sourceTree = "<group>"; };
 		750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllTableViewCell.xib; sourceTree = "<group>"; };
+		750BD941270233E70039379E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		7515548426F42B51002679FB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		7545F2FB26F69D350000BD5E /* NearYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearYou.swift; sourceTree = "<group>"; };
 		7545F2FD26F69D820000BD5E /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
 		7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		7560E3F126FB6793005181F3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7560E3F726FC0868005181F3 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		7560E3F926FC0CAC005181F3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		756CE2F826EF78CD0066EBA7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		7560E3F026FB6761005181F3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				7560E3F126FB6793005181F3 /* NetworkService.swift */,
 				7560E3F926FC0CAC005181F3 /* AppError.swift */,
+				750BD941270233E70039379E /* NetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -704,7 +704,6 @@
 				7560E3FA26FC0CAC005181F3 /* AppError.swift in Sources */,
 				7545F2F226F4C2A00000BD5E /* NearYouCollectionViewCell.swift in Sources */,
 				7560E3F826FC0868005181F3 /* RestaurantModel.swift in Sources */,
-				7560E3F226FB6793005181F3 /* NetworkService.swift in Sources */,
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
 				75CB156526F2C8F500E2FC50 /* CategoriesViewController.swift in Sources */,
 				7545C61826FD1DEC003B20CA /* StringasURL+Extension.swift in Sources */,
@@ -718,6 +717,7 @@
 				7545C61326FCE45E003B20CA /* FetchedRestaurantsTableViewCell.swift in Sources */,
 				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
+				750BD942270233E70039379E /* NetworkService.swift in Sources */,
 				7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,

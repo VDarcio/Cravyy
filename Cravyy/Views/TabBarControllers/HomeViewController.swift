@@ -35,6 +35,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         //Register all the cells
         registerCells()
         //request user location
@@ -42,20 +44,21 @@ class HomeViewController: UIViewController {
        locationManager.requestWhenInUseAuthorization()
        locationManager.requestLocation()
         
-        
-        
         //Instantiate ViewController that presents All the items
         instantiateViews()
        
-       
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func instantiateViews(){
         
         
         //TODO: Attach this to a navigation controller
-        ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
+        ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as? ViewAllViewViewController
+        
         ViewAllVC?.modalPresentationStyle = .fullScreen
         ViewAllVC?.modalTransitionStyle = .coverVertical
         
@@ -74,31 +77,39 @@ class HomeViewController: UIViewController {
     
     
     
-//    @IBAction func viewAllPressed(_ sender: UIButton) {
-//        //switch thru all tags (0,1,2) to decide the information to be sent to the ViewAllViewController
-//        switch sender.tag{
-//        case 0 :
-//            //present the VC
-//            present(ViewAllVC!, animated: true, completion: nil)
-//            // set VC's tag as the same as our button
-//            ViewAllVC?.tag = sender.tag
-//            // Pass information according to our tag
-//            ViewAllVC?.featured = featured
-//        case 1 :
-//            present(ViewAllVC!, animated: true, completion: nil)
-//            ViewAllVC?.tag = sender.tag
-//            ViewAllVC?.nearYou = nearYou
-//        case 2:
-//            present(ViewAllVC!, animated: true, completion: nil)
-//            ViewAllVC?.tag = sender.tag
-//            ViewAllVC?.bestDeals = bestDeals
-//        default : return
-//        }
-//
-//
-//
-//
-//    }
+    @IBAction func viewAllPressed(_ sender: UIButton) {
+        //switch thru all tags (0,1,2) to decide the information to be sent to the ViewAllViewController
+        switch sender.tag{
+            
+        case 0 :
+            
+            // set VC's tag as the same as our button
+            ViewAllVC?.tag = sender.tag
+            // Pass information according to our tag
+            ViewAllVC?.featured = self.featured
+            //present the VC
+            navigationController?.pushViewController(ViewAllVC!, animated: true)
+               // ViewAllVC?.reloadContent()
+            
+        case 1 :
+            ViewAllVC?.tag = sender.tag
+            ViewAllVC?.nearYou = self.nearYou
+            navigationController?.pushViewController(ViewAllVC!, animated: true)
+           //ViewAllVC?.reloadContent()
+            
+        case 2:
+            ViewAllVC?.tag = sender.tag
+            ViewAllVC?.bestDeals = self.bestDeals
+            navigationController?.pushViewController(ViewAllVC!, animated: true)
+           // ViewAllVC?.reloadContent()
+           
+        default : return
+        }
+
+
+
+
+    }
     
     
     
@@ -124,11 +135,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         //switch thru all the collectionviews and return the count to poupulate the 3 collectionviews
         switch collectionView{
         case featuredCollectionView:
-            return  featured.count
+            return  min(10, featured.count)//returns the minimum between 2 values
         case nearYouCollectionView:
-            return  nearYou.count
+            return   min(12, nearYou.count)  //returns the minimum between 2 values
         case BestDealsCollectionView:
-            return  bestDeals.count
+            return   min(10, bestDeals.count) //returns the minimum between 2 values
             
         default:
             return 0
@@ -173,7 +184,9 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         default:
             return
         }
+        
         navigationController?.pushViewController(detailVC, animated: true)
+    
     }
     
     
@@ -208,8 +221,8 @@ extension HomeViewController:CLLocationManagerDelegate{
                    self!.nearYou = restaurantsfetched!
                     self!.bestDeals = restaurantsfetched!
                     self!.featuredCollectionView.reloadData()
-                    self!.nearYouCollectionView.reloadData()
-                    self!.BestDealsCollectionView.reloadData()
+                   self!.nearYouCollectionView.reloadData()
+                   self!.BestDealsCollectionView.reloadData()
                     
                     
                 }

@@ -46,6 +46,12 @@ class DetailViewController: UIViewController {
         
     
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    
     func checkStatus(){
         if restaurant?.open_now_text == nil{
             isOpenLabel.alpha = 0.0
@@ -71,7 +77,16 @@ class DetailViewController: UIViewController {
     
     func VcSetup(){
         guard restaurant != nil else {return}
-        restaurantImageView.kf.setImage(with: restaurant?.photo?.images?.original?.url?.asURL)
+        
+        if restaurant?.photo?.images?.original?.url != nil{
+            restaurantImageView.kf.setImage(with: restaurant?.photo?.images?.original?.url?.asURL)
+        }else{
+            restaurantImageView.image = UIImage(named: "brazillian")
+        }
+        
+        
+        
+        
         restaurantName.text = restaurant?.name
         isOpenLabel.text = restaurant?.open_now_text
         restaurantRating.text = "⭐️\(restaurant?.rating ?? "")/5"

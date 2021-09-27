@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */; };
+		750BD94027020FFB0039379E /* ViewAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */; };
 		7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */; };
 		7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */; };
 		7515548526F42B51002679FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515548426F42B51002679FB /* CardView.swift */; };
@@ -79,6 +81,8 @@
 		375FD28BFFE6EE1351900CD3 /* Pods-Cravyy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cravyy.release.xcconfig"; path = "Target Support Files/Pods-Cravyy/Pods-Cravyy.release.xcconfig"; sourceTree = "<group>"; };
 		47CDFD935F38D9FF26AB5B0A /* Pods_CravyyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CravyyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B04C1379DE3898E709D827E /* Pods-CravyyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CravyyTests.release.xcconfig"; path = "Target Support Files/Pods-CravyyTests/Pods-CravyyTests.release.xcconfig"; sourceTree = "<group>"; };
+		750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllTableViewCell.swift; sourceTree = "<group>"; };
+		750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllTableViewCell.xib; sourceTree = "<group>"; };
 		7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		7515548426F42B51002679FB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -188,9 +192,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		750BD93C27020F940039379E /* ViewAllTableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */,
+				750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */,
+			);
+			path = ViewAllTableviewCell;
+			sourceTree = "<group>";
+		};
 		7515547626F4265D002679FB /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				750BD93C27020F940039379E /* ViewAllTableviewCell */,
 				7545C61526FCE46C003B20CA /* CategoriesTableViewCell */,
 				7545F2F426F5009F0000BD5E /* BestDealsCollectionView */,
 				7545F2EF26F4C28A0000BD5E /* NearYouCollectionView */,
@@ -548,6 +562,7 @@
 				756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */,
 				7545C60E26FCC1A2003B20CA /* CategoriesTableViewCell.xib in Resources */,
 				757D911826E8FB5300598DF1 /* LaunchScreen.storyboard in Resources */,
+				750BD94027020FFB0039379E /* ViewAllTableViewCell.xib in Resources */,
 				7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */,
 				757D911026E8FB4D00598DF1 /* Main.storyboard in Resources */,
 				7545F2F826F500F10000BD5E /* BestDealsCollectionViewCell.xib in Resources */,
@@ -682,6 +697,7 @@
 			files = (
 				7545F2FC26F69D350000BD5E /* NearYou.swift in Sources */,
 				757D911326E8FB4D00598DF1 /* Cravyy.xcdatamodeld in Sources */,
+				750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */,
 				7545C61026FCE0B9003B20CA /* FetchedRestaurantsViewController.swift in Sources */,
 				757D910926E8FB4D00598DF1 /* AppDelegate.swift in Sources */,
 				757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */,

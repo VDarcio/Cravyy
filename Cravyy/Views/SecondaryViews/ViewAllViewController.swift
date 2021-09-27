@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
+import ProgressHUD
 
 class ViewAllViewViewController: UIViewController {
     
     
-    @IBOutlet weak var tagTitle: UILabel!
+    @IBOutlet weak var vctitle: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var tag : Int?
@@ -20,37 +23,50 @@ class ViewAllViewViewController: UIViewController {
     //tag = 2 (bestDeals)
     
     
-    //var restaurants : [Restaurants] = []
-    var featured : [Featured] = []
-    var nearYou : [Nearyou] = []
-    var bestDeals : [BestDeals] = []
+    
+    var featured : [restaurantsModel] = []
+    var nearYou : [restaurantsModel] = []
+    var bestDeals : [restaurantsModel] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.register(UINib(nibName: "ViewAllTableViewCell", bundle: nil), forCellReuseIdentifier: "ViewAllCell")
+      
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadContent()
+         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func reloadContent(){
+        tableView.reloadData()
+        setVcTitle(tag!)
+    }
+    
+    
+    
+   
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     //func that use the tag to determine what the title should be
     func setVcTitle(_ tag : Int){
         switch tag{
         case 0:
-            tagTitle.text = "Featured"
+            title = "Featured"
         case 1 :
-            tagTitle.text = "Near You"
+            title = "Near You"
         case 2:
-            tagTitle.text = "Best deals"
+            title = "Best deals"
             
-        default: tagTitle.text = "Nadadadad"
+        default: title = ""
             
         }
     }
     
-    //reload tableview everytime the view reappears to change items
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        tableView.reloadData()
-        setVcTitle(tag!)
-    }
     
     //dismiss the VC when the returnButton is pressed
     @IBAction func returnPressed(_ sender: Any) {
@@ -73,24 +89,36 @@ extension ViewAllViewViewController: UITableViewDelegate, UITableViewDataSource{
     }
     //use the tag we got from HomeVc to decide wich array to use
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "ViewAllCell", for: indexPath)
+       let cell = tableView.dequeueReusableCell(withIdentifier: "ViewAllCell", for: indexPath) as! ViewAllTableViewCell
         switch tag{
         case 0:
-            cell.textLabel?.text = featured[indexPath.row].name
-            cell.imageView?.image = featured[indexPath.row].image
-            cell.detailTextLabel?.text = featured[indexPath.row].rating
+            cell.setup(restaurant: featured[indexPath.row], tag: 0)
             return cell
+            
         case 1 :
-            cell.textLabel?.text = nearYou[indexPath.row].name
-            cell.imageView?.image = nearYou[indexPath.row].image
-            cell.detailTextLabel?.text = nearYou[indexPath.row].distance
+            cell.setup(restaurant: nearYou[indexPath.row], tag: 1)
             return cell
         case 2:
-            cell.textLabel?.text = bestDeals[indexPath.row].name
-            cell.imageView?.image = bestDeals[indexPath.row].image
-            cell.detailTextLabel?.text = bestDeals[indexPath.row].price
+            
+            cell.setup(restaurant: bestDeals[indexPath.row], tag: 2)
             return cell
         default: return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        switch tag{
+        case 0:
+            detailVC.restaurant = featured[indexPath.row]
+        case 1 :
+            detailVC.restaurant = nearYou[indexPath.row]
+        case 2:
+            detailVC.restaurant = bestDeals[indexPath.row]
+           
+        default: return
+        }
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

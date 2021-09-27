@@ -1168,10 +1168,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-ff-ct2">
                                 <rect key="frame" x="0.0" y="94" width="428" height="749"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-UU-Ujd">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1166"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-UU-Ujd">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1136"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-qF-WYe">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-qF-WYe" userLabel="Featured View">
                                                 <rect key="frame" x="0.0" y="0.0" width="428" height="369"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ViewAllFeatured" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahR-DR-ega">
@@ -1225,19 +1225,19 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="R2b-1H-N5z" firstAttribute="leading" secondItem="Ib7-qF-WYe" secondAttribute="leading" id="3X5-L6-cQE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="R2b-1H-N5z" secondAttribute="bottom" id="5yM-qY-bzi"/>
                                                     <constraint firstAttribute="trailing" secondItem="ahR-DR-ega" secondAttribute="trailing" constant="20" id="CBQ-Cj-is3"/>
                                                     <constraint firstItem="BzN-tc-SeL" firstAttribute="top" secondItem="Ib7-qF-WYe" secondAttribute="top" constant="16" id="DvE-kp-uvP"/>
                                                     <constraint firstItem="BzN-tc-SeL" firstAttribute="leading" secondItem="Ib7-qF-WYe" secondAttribute="leading" constant="16" id="KWy-3c-Qo9"/>
                                                     <constraint firstItem="ahR-DR-ega" firstAttribute="top" secondItem="Ib7-qF-WYe" secondAttribute="top" constant="16" id="PUu-Yp-ZVl"/>
                                                     <constraint firstItem="ahR-DR-ega" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BzN-tc-SeL" secondAttribute="trailing" constant="8" symbolic="YES" id="gFq-SC-ycX"/>
                                                     <constraint firstAttribute="trailing" secondItem="R2b-1H-N5z" secondAttribute="trailing" id="glw-g0-XFc"/>
-                                                    <constraint firstAttribute="bottom" secondItem="R2b-1H-N5z" secondAttribute="bottom" id="ied-S8-bqv"/>
                                                     <constraint firstAttribute="trailing" secondItem="BzN-tc-SeL" secondAttribute="trailing" constant="120" id="jYB-mU-i1n"/>
                                                     <constraint firstItem="R2b-1H-N5z" firstAttribute="top" secondItem="BzN-tc-SeL" secondAttribute="bottom" constant="8" id="v8c-rW-K92"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-fi-ch1">
-                                                <rect key="frame" x="0.0" y="389" width="428" height="388"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-fi-ch1" userLabel="NearYou View">
+                                                <rect key="frame" x="0.0" y="374" width="428" height="388"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riM-Fz-LjO">
                                                         <rect key="frame" x="358" y="16" width="50" height="32"/>
@@ -1302,7 +1302,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-S0-FeA">
-                                                <rect key="frame" x="0.0" y="797" width="428" height="369"/>
+                                                <rect key="frame" x="0.0" y="767" width="428" height="369"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-Rl-xFB">
                                                         <rect key="frame" x="358" y="16" width="50" height="32"/>

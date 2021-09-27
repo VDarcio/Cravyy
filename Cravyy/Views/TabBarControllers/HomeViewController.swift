@@ -35,23 +35,31 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProgressHUD.show()
-        //request user location
-        locationManager.delegate=self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        
         //Register all the cells
         registerCells()
+        //request user location
+        locationManager.delegate=self
+       locationManager.requestWhenInUseAuthorization()
+       locationManager.requestLocation()
+        
+        
         
         //Instantiate ViewController that presents All the items
+        instantiateViews()
+       
+       
+    
+    }
+    
+    func instantiateViews(){
+        
+        
         //TODO: Attach this to a navigation controller
         ViewAllVC = storyboard?.instantiateViewController(identifier: "ViewAllVC") as! ViewAllViewViewController
         ViewAllVC?.modalPresentationStyle = .fullScreen
         ViewAllVC?.modalTransitionStyle = .coverVertical
         
-       
-    
+        
     }
     //method to reload all the collectionviewa
     func reloadViews(){
@@ -116,11 +124,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         //switch thru all the collectionviews and return the count to poupulate the 3 collectionviews
         switch collectionView{
         case featuredCollectionView:
-            return featured.count
+            return  featured.count
         case nearYouCollectionView:
-            return nearYou.count
+            return  nearYou.count
         case BestDealsCollectionView:
-            return bestDeals.count
+            return  bestDeals.count
             
         default:
             return 0
@@ -176,6 +184,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
 extension HomeViewController:CLLocationManagerDelegate{
     //this method is called everytime the location is requested, it updates the location and calls the api to fetch restaurants in the area
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        ProgressHUD.show()
         if let location = locations.last{
             locationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
@@ -184,38 +193,46 @@ extension HomeViewController:CLLocationManagerDelegate{
             HomeViewController.longitude = lon
             
             //Call networkservice to fetch all restaurants and place the data on all categories
-            NetworkService.fetchAllRestaurants(latitude: lat, Longitude: lon) { restaurantsfetched in
+            NetworkService.fetchAllRestaurants(latitude: lat, Longitude: lon) { [weak self] (restaurantsfetched) in
+               
+                
+
                 
                 //filter the array and separate the top rated restaurants
                 let featuredret = restaurantsfetched?.filter({$0.rating == "5.0" || $0.rating == "4.9" || $0.rating == "4.8" || $0.rating == "4.7" || $0.rating == "4.6" || $0.rating == "4.5" || $0.rating == "4.4" || $0.rating == "4.3" || $0.rating == "4.2" || $0.rating == "4.1" || $0.rating == "4.0"})
-                
-            //update UI
+                //update UI
                 DispatchQueue.main.async {
                     //divide the data in all categories
-                    self.featured = featuredret!
-                    self.nearYou = restaurantsfetched!
-                    self.bestDeals = restaurantsfetched!
-                    self.reloadViews()
+                   ProgressHUD.dismiss()
+                    self!.featured = featuredret!
+                   self!.nearYou = restaurantsfetched!
+                    self!.bestDeals = restaurantsfetched!
+                    self!.featuredCollectionView.reloadData()
+                    self!.nearYouCollectionView.reloadData()
+                    self!.BestDealsCollectionView.reloadData()
                     
-                    //call method to get location name
-                    self.lookUpCurrentLocation { placemark in
-                        //display location name to the user
-                        self.locationLabel.text = placemark?.name
-                      
-                        
-                    }
                     
-                    ProgressHUD.dismiss()
                 }
             }
-            
+            //call method to get location name
+            self.lookUpCurrentLocation { [weak self] (placemark) in
+                //display location name to the user
+                DispatchQueue.main.async {
+                    self!.locationLabel.text = placemark?.name
+                }
+
+
+            }
+
             
             
         }
     }
+   
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error locating\(error)")
+        ProgressHUD.showError("Failed to Locate")
     }
     
     //  Method to Get location name

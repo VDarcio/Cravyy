@@ -1175,10 +1175,10 @@
                                         <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="mappin.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="locatePressed:" destination="KOb-QE-J0w" eventType="touchUpInside" id="XDG-eq-FAa"/>
+                                            <action selector="locatePressed:" destination="KOb-QE-J0w" eventType="touchUpInside" id="2e2-hX-Isq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cairo, Egipto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGi-fG-yVu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGi-fG-yVu">
                                         <rect key="frame" x="60" y="0.0" width="308" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>

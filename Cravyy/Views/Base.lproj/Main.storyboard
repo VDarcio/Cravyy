@@ -232,9 +232,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvE-8H-0Eu">
-                                <rect key="frame" x="20" y="727" width="388" height="31"/>
+                                <rect key="frame" x="291.66666666666669" y="727" width="126.33333333333331" height="35.666666666666629"/>
+                                <color key="tintColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip for Now"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip for Now">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="skipTapped:" destination="215-vl-Lkz" eventType="touchUpInside" id="ff8-30-iBc"/>
                                 </connections>
@@ -244,14 +247,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="R00-0z-K24" secondAttribute="trailing" constant="20" id="58X-y0-9HU"/>
-                            <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="YvE-8H-0Eu" secondAttribute="trailing" constant="20" id="6hG-UO-jse"/>
+                            <constraint firstItem="txn-l3-GYa" firstAttribute="trailing" secondItem="YvE-8H-0Eu" secondAttribute="trailing" constant="10" id="6hG-UO-jse"/>
                             <constraint firstItem="YvE-8H-0Eu" firstAttribute="top" secondItem="UeO-UO-SgL" secondAttribute="bottom" id="72h-DB-i0H"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="top" secondItem="R00-0z-K24" secondAttribute="bottom" constant="40" id="7Wz-zl-0YH"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="centerX" secondItem="baE-3o-370" secondAttribute="centerX" id="Bng-UR-FPb"/>
                             <constraint firstItem="4ED-o7-QeZ" firstAttribute="top" secondItem="txn-l3-GYa" secondAttribute="top" id="Cqc-MZ-mCo"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" constant="20" id="FQ3-l9-Yko"/>
                             <constraint firstItem="4ED-o7-QeZ" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" id="Hw0-SM-5s2"/>
-                            <constraint firstItem="YvE-8H-0Eu" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" constant="20" id="M4a-gS-kGm"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="centerX" secondItem="baE-3o-370" secondAttribute="centerX" id="Q9z-Mz-yhQ"/>
                             <constraint firstItem="R00-0z-K24" firstAttribute="centerY" secondItem="baE-3o-370" secondAttribute="centerY" id="SGM-e0-mil"/>
                             <constraint firstItem="UeO-UO-SgL" firstAttribute="leading" secondItem="txn-l3-GYa" secondAttribute="leading" constant="60" id="eWr-cy-GaH"/>
@@ -626,6 +628,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ny1-PO-bUu"/>
                     <connections>
+                        <outlet property="searchBar" destination="UCl-dH-EWh" id="zFv-lM-zKR"/>
                         <outlet property="tableView" destination="PyW-dO-XtS" id="7Xo-XF-azg"/>
                     </connections>
                 </viewController>
@@ -722,7 +725,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-fZ-qXU">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-fZ-qXU">
                                                         <rect key="frame" x="0.0" y="25.333333333333371" width="85.666666666666671" height="17"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Visit WebSite">
@@ -1050,31 +1053,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="230" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-yi-Vs9">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="95" width="428" height="797"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="y7m-09-fd8" id="WrJ-5y-Jhe"/>
                                     <outlet property="delegate" destination="y7m-09-fd8" id="mA8-5w-j3q"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yWU-9J-ouw">
+                                <rect key="frame" x="0.0" y="44" width="428" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5sO-7r-ccF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5sO-7r-ccF" firstAttribute="bottom" secondItem="WUo-yi-Vs9" secondAttribute="bottom" id="7K5-ZR-qfC"/>
-                            <constraint firstItem="WUo-yi-Vs9" firstAttribute="top" secondItem="5sO-7r-ccF" secondAttribute="top" id="RKS-hd-VC1"/>
+                            <constraint firstItem="yWU-9J-ouw" firstAttribute="trailing" secondItem="5sO-7r-ccF" secondAttribute="trailing" id="Hfa-0J-8ab"/>
+                            <constraint firstItem="yWU-9J-ouw" firstAttribute="leading" secondItem="5sO-7r-ccF" secondAttribute="leading" id="VWe-ZJ-4C9"/>
                             <constraint firstItem="5sO-7r-ccF" firstAttribute="trailing" secondItem="WUo-yi-Vs9" secondAttribute="trailing" id="XK7-kw-CWF"/>
                             <constraint firstItem="WUo-yi-Vs9" firstAttribute="leading" secondItem="5sO-7r-ccF" secondAttribute="leading" id="Xuv-K1-Kzy"/>
+                            <constraint firstItem="yWU-9J-ouw" firstAttribute="top" secondItem="5sO-7r-ccF" secondAttribute="top" id="bov-9w-pMt"/>
+                            <constraint firstItem="WUo-yi-Vs9" firstAttribute="top" secondItem="yWU-9J-ouw" secondAttribute="bottom" id="tAO-Sb-TVt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="51Y-Se-mth"/>
                     <connections>
+                        <outlet property="searchBar" destination="yWU-9J-ouw" id="EqT-6Z-rYq"/>
                         <outlet property="tableview" destination="WUo-yi-Vs9" id="N98-Wk-ENK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdf-Fa-wgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6403.7383177570091" y="1571.9222462203024"/>
+            <point key="canvasLocation" x="6530" y="1581"/>
         </scene>
         <!--Map-->
         <scene sceneID="y2h-Gd-xvQ">

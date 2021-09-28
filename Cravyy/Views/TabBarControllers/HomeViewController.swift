@@ -88,20 +88,20 @@ class HomeViewController: UIViewController {
             // set VC's tag as the same as our button
             ViewAllVC?.tag = sender.tag
             // Pass information according to our tag
-            ViewAllVC?.featured = self.featured
+            ViewAllVC?.restaurants = self.featured
             //present the VC
             navigationController?.pushViewController(ViewAllVC!, animated: true)
             // ViewAllVC?.reloadContent()
             
         case 1 :
             ViewAllVC?.tag = sender.tag
-            ViewAllVC?.nearYou = self.nearYou
+            ViewAllVC?.restaurants = self.nearYou
             navigationController?.pushViewController(ViewAllVC!, animated: true)
             //ViewAllVC?.reloadContent()
             
         case 2:
             ViewAllVC?.tag = sender.tag
-            ViewAllVC?.bestDeals = self.bestDeals
+            ViewAllVC?.restaurants = self.bestDeals
             navigationController?.pushViewController(ViewAllVC!, animated: true)
             // ViewAllVC?.reloadContent()
             

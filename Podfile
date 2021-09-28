@@ -8,6 +8,7 @@ target 'Cravyy' do
   # Pods for Cravyy
 pod "Kingfisher"
 pod "ProgressHUD"
+pod "IQKeyboardManagerSwift"
 
 
   target 'CravyyTests' do

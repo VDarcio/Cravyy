@@ -13,7 +13,13 @@ class CardView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initialsetup()
+        
+        switch traitCollection.userInterfaceStyle {
+                case .light, .unspecified:
+            initialsetup()
+                case .dark:
+                    initialsetup2()
+            }
     }
     
     required init?(coder: NSCoder) {
@@ -29,4 +35,16 @@ class CardView: UIView {
         cornerradius = 10
         
     }
-}
+    
+    private func initialsetup2(){
+        layer.shadowColor = UIColor.green.cgColor
+        layer.shadowOffset = .zero
+        layer.cornerRadius = 10
+        layer.shadowOpacity = 0.1
+        cornerradius = 10
+        
+    }
+    
+    }
+   
+

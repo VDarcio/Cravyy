@@ -25,7 +25,7 @@ struct NetworkService{
         
         let headers = [
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-            "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
+            "x-rapidapi-key": "a2c8700266mshecf31f6507d8c3dp12c7c0jsn8869365a8853"
         ]
 
         let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=\(lat)&longitude=\(lon)&limit=30&currency=EUR&combined_food=\(id)&distance=10&open_now=false&lunit=km&lang=en_US")! as URL,
@@ -40,9 +40,9 @@ struct NetworkService{
                 print(error)
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                //print(httpResponse)
-//                let responseString = String(data : data!, encoding: .utf8) ?? "could not turn into a string"
-//                print("response = \(responseString)")
+                print(httpResponse)
+               let responseString = String(data : data!, encoding: .utf8) ?? "could not turn into a string"
+               print("response = \(responseString)")
                 
                 //initialize decoder
                 let decoder = JSONDecoder()
@@ -78,7 +78,7 @@ struct NetworkService{
         
         let headers = [
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-            "x-rapidapi-key": "7edd5a436fmshc0c6d2b91cbee85p1dc4e9jsn45edfc0ef7c5"
+            "x-rapidapi-key": "a2c8700266mshecf31f6507d8c3dp12c7c0jsn8869365a8853"
         ]
 
         let request = NSMutableURLRequest(url: NSURL(string: "https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=\(latitude)&longitude=\(Longitude)&limit=30&currency=EUR&distance=10&open_now=false&lunit=km&lang=en_US")! as URL,

@@ -21,7 +21,7 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
             restaurantImageView.image = UIImage(named: "brazillian")
         }
         restautantName.text = featured.name
-        restaurantDetail.text = "⭐️\(featured.rating ?? "")/5"
+        restaurantDetail.text = "⭐️ \(featured.rating ?? "")/5"
         
     }
     

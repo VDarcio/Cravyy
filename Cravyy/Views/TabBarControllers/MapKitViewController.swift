@@ -51,7 +51,7 @@ class MapKitViewController: UIViewController {
        let lat = Double(restaurants[target].latitude!)
        let lon = Double(restaurants[target].longitude!)
             //add to the map using the restaurant data
-        addannotation(CLLocationCoordinate2DMake(lat!, lon!), restaurants[target].name!, restaurants[target].distance_string!)
+        addannotation(CLLocationCoordinate2DMake(lat!, lon!), restaurants[target].name!, restaurants[target].open_now_text ?? "")
         
         
     }

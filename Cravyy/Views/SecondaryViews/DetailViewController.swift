@@ -86,6 +86,10 @@ class DetailViewController: UIViewController {
         
         
         
+        isOpenLabel.layer.cornerRadius = 10.0
+        isOpenLabel.layer.masksToBounds = true
+        //isOpenLabel.layer.borderColor = UIColor.black.cgColor
+        //isOpenLabel.layer.borderWidth = 1.0
         
         restaurantName.text = restaurant?.name
         isOpenLabel.text = restaurant?.open_now_text

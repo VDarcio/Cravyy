@@ -73,6 +73,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func locatePressed(_ sender: UIButton) {
+        ProgressHUD.show()
         locationManager.requestLocation()
     }
     
@@ -136,11 +137,11 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         //switch thru all the collectionviews and return the count to poupulate the 3 collectionviews
         switch collectionView{
         case featuredCollectionView:
-            return  min(10, featured.count)//returns the minimum between 2 values
+            return  min(6, featured.count)//returns the minimum between 2 values
         case nearYouCollectionView:
-            return   min(12, nearYou.count)  //returns the minimum between 2 values
+            return   min(9, nearYou.count)  //returns the minimum between 2 values
         case BestDealsCollectionView:
-            return   min(10, bestDeals.count) //returns the minimum between 2 values
+            return   min(6, bestDeals.count) //returns the minimum between 2 values
             
         default:
             return 0

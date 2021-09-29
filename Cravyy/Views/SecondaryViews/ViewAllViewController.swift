@@ -96,7 +96,7 @@ extension ViewAllViewViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
         tableView.deselectRow(at: indexPath, animated: true)
-        detailVC.restaurant = restaurants[indexPath.row]
+        detailVC.restaurant = filteredData[indexPath.row]
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

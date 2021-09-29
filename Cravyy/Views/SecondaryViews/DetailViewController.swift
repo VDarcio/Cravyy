@@ -110,11 +110,26 @@ class DetailViewController: UIViewController {
   
 //   Functions to deal with user interactions on labels and buttons
     @IBAction func CallRestaurant(){
-        print("phone number")
+        //make sure that is a number and remove the whitespaces to be compatible with type URL
+        if let number = restaurant?.phone?.removeWhitespace(){
+            //create url
+            let urlAsString = URL(string: "tel://\(number)")
+            //check if app can place the call
+            if UIApplication.shared.canOpenURL(urlAsString!){
+                //place the call
+                UIApplication.shared.open(urlAsString!, options: [:], completionHandler: nil)
+        }
+        
+        }
+        
     }
     
     @IBAction func openWebSite(){
-        print("www.facevoo.com")
+        if let website = restaurant?.website{
+            guard let url = URL(string: website) else { return }
+            UIApplication.shared.open(url)
+        }
+        
     }
     @IBAction func getAdress(){
         print("open google maps")

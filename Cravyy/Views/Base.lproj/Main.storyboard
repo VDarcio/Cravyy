@@ -650,7 +650,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UJ-1Q-KGH">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="900"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u55-CI-Kga">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u55-CI-Kga">
                                                 <rect key="frame" x="0.0" y="0.0" width="420" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="bHt-L2-V4O"/>
@@ -847,8 +847,8 @@
                         <constraints>
                             <constraint firstItem="FnT-eT-8N3" firstAttribute="leading" secondItem="cY2-vw-6ii" secondAttribute="leading" id="MmB-Sc-Wu1"/>
                             <constraint firstAttribute="bottom" secondItem="FnT-eT-8N3" secondAttribute="bottom" id="Wqf-zg-PVr"/>
-                            <constraint firstAttribute="trailing" secondItem="FnT-eT-8N3" secondAttribute="trailing" id="XfQ-Pk-jca"/>
                             <constraint firstItem="FnT-eT-8N3" firstAttribute="top" secondItem="Ksn-Wl-2YR" secondAttribute="top" id="bFF-7j-pFj"/>
+                            <constraint firstAttribute="trailing" secondItem="FnT-eT-8N3" secondAttribute="trailing" id="gM9-H2-N8w"/>
                         </constraints>
                     </view>
                     <connections>

@@ -52,6 +52,7 @@
 		75CB156526F2C8F500E2FC50 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156426F2C8F500E2FC50 /* CategoriesViewController.swift */; };
 		75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */; };
 		75CECA4E26FA82DB003EEFF2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */; };
+		75FAECA92703EBF700A2549B /* String+trimWhiteSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FAECA82703EBF700A2549B /* String+trimWhiteSpaces.swift */; };
 		75FC8D5126FE3A15005670AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FC8D5026FE3A15005670AA /* MapKit.framework */; };
 		78BA77E89F40550BF5EAD0FD /* Pods_Cravyy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB8EAD4A8B16311F913BD5D /* Pods_Cravyy.framework */; };
 		865738E946BB14F55291C96A /* Pods_CravyyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CDFD935F38D9FF26AB5B0A /* Pods_CravyyTests.framework */; };
@@ -132,6 +133,7 @@
 		75CB156426F2C8F500E2FC50 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		75CECA4B26FA3C46003EEFF2 /* ViewAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllViewController.swift; sourceTree = "<group>"; };
 		75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		75FAECA82703EBF700A2549B /* String+trimWhiteSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+trimWhiteSpaces.swift"; sourceTree = "<group>"; };
 		75FC8D5026FE3A15005670AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9AF1FBCCAB7C777A71201180 /* Pods_Cravyy_CravyyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cravyy_CravyyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE58C74CD16FED7AE8F35D5E /* Pods-Cravyy-CravyyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cravyy-CravyyUITests.release.xcconfig"; path = "Target Support Files/Pods-Cravyy-CravyyUITests/Pods-Cravyy-CravyyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				756CE30126EFF7250066EBA7 /* Images.xcassets */,
 				756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */,
 				7545C61726FD1DEB003B20CA /* StringasURL+Extension.swift */,
+				75FAECA82703EBF700A2549B /* String+trimWhiteSpaces.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				7545C61826FD1DEC003B20CA /* StringasURL+Extension.swift in Sources */,
 				75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */,
 				7545F2FE26F69D820000BD5E /* Featured.swift in Sources */,
+				75FAECA92703EBF700A2549B /* String+trimWhiteSpaces.swift in Sources */,
 				7515548526F42B51002679FB /* CardView.swift in Sources */,
 				75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,

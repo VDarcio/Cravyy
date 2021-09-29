@@ -61,6 +61,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>damemejhfdigfdighigi</string>
+	<string>We need your location to help you find the best restaurants around you</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+		<string>maps</string>
+	</array>
 </dict>
 </plist>

@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var restaurantDistance: UILabel!
     @IBOutlet weak var restaurantDescription: UITextView!
     
-    @IBOutlet weak var bookMarkStar: UIButton!
+    
     @IBOutlet weak var webSiteLabel: UILabel!
     var restaurantWebsite: String?
     @IBOutlet weak var restaurantPhoneNumber: UILabel!
@@ -56,6 +56,19 @@ class DetailViewController: UIViewController {
         
     
     }
+    func setupFavorite(_ favorite: FavRest){
+        restaurantName.text = favorite.name
+        restaurantAdress.text = favorite.adress
+        restaurantDescription.text = favorite.descriptionn
+        restaurantImageView.kf.setImage(with: favorite.photourl?.asURL)
+        webSiteLabel.text = favorite.website
+        restaurantPhoneNumber.text = favorite.phone
+        addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
+        addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        restaurantDistance.alpha = 0.0
+        
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -77,9 +90,9 @@ class DetailViewController: UIViewController {
         if restaurant?.rating ==  nil{
             restaurantRating.alpha = 0.0
         }
-        if restaurant?.website ==  nil{
-            webSiteLabel.alpha = 0.0
-        }
+//        if restaurant?.website ==  nil{
+//            webSiteLabel.alpha = 0.0
+//        }
         ProgressHUD.dismiss()
        
     }
@@ -157,9 +170,7 @@ class DetailViewController: UIViewController {
     }
     
    
-    @IBAction func bookmarkTapped(_ sender: Any) {
-        bookMarkStar.setImage(UIImage(systemName: "star.fill"), for: .normal)
-    }
+   
     
     //MARK:-Core Data Manager
     

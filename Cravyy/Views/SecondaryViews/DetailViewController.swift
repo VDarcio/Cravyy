@@ -11,6 +11,9 @@ import Kingfisher
 
 class DetailViewController: UIViewController {
 
+    var userslat = HomeViewController.latitude
+    var userslong = HomeViewController.longitude
+    
     //MARK:-All Outlets
     var restaurant : restaurantsModel?
     @IBOutlet weak var restaurantImageView: UIImageView!
@@ -20,12 +23,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var restaurantDistance: UILabel!
     @IBOutlet weak var restaurantDescription: UITextView!
     
+    @IBOutlet weak var bookMarkStar: UIButton!
     @IBOutlet weak var webSiteLabel: UILabel!
     var restaurantWebsite: String?
     @IBOutlet weak var restaurantPhoneNumber: UILabel!
     @IBOutlet weak var restaurantPriceRange: UILabel!
     @IBOutlet weak var restaurantAdress: UILabel!
-    @IBOutlet weak var FavoriteButton: UIButton!
+    
+    @IBOutlet weak var addtoFavoritesLabel: UIButton!
     
     
     //TODO asign functions to all the labels
@@ -133,11 +138,27 @@ class DetailViewController: UIViewController {
     }
     @IBAction func getAdress(){
         print("open google maps")
+        let lat = restaurant?.latitude
+        let long = restaurant?.longitude
+        
+        let url = URL(string: "maps://?saddr=&daddr=\(lat ?? ""),\(long ?? "")")
+        if UIApplication.shared.canOpenURL(url!){
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        }
     }
     
    
-   
+    @IBAction func bookmarkTapped(_ sender: Any) {
+        bookMarkStar.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    }
     
+  
+    @IBAction func addtoFavoritesPressed(_ sender: Any) {
+        
+        addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
+        addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    }
     
-    
+
+
 }

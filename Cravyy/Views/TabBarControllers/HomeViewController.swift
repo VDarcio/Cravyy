@@ -4,6 +4,7 @@
 //
 //  Created by VD on 16/09/2021.
 //
+// IMPORTANT: BestDeals array == Recommandations Array
 
 import UIKit
 import CoreLocation
@@ -177,6 +178,7 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         case featuredCollectionView:
             detailVC.restaurant = featured[indexPath.row]
             
+            
         case nearYouCollectionView:
             detailVC.restaurant = nearYou[indexPath.row]
             
@@ -212,8 +214,11 @@ extension HomeViewController:CLLocationManagerDelegate{
                 
                 
                 
+                //shuffle the restaurants and use as recommendations when the user starts using the app for the first time
+                let recommendations = restaurantsfetched?.shuffled()
                 
-                
+               
+            
                 //filter the array and separate the top rated restaurants
                 let featuredret = restaurantsfetched?.filter({$0.rating == "5.0" || $0.rating == "4.9" || $0.rating == "4.8" || $0.rating == "4.7" || $0.rating == "4.6" || $0.rating == "4.5" || $0.rating == "4.4" || $0.rating == "4.3" || $0.rating == "4.2" || $0.rating == "4.1" || $0.rating == "4.0"})
                 //update UI
@@ -222,7 +227,7 @@ extension HomeViewController:CLLocationManagerDelegate{
                     ProgressHUD.dismiss()
                     self!.featured = featuredret!
                     self!.nearYou = restaurantsfetched!
-                    self!.bestDeals = restaurantsfetched!
+                    self!.bestDeals = recommendations!
                     HomeViewController.restaurantsclose = restaurantsfetched! // property to be sent to map to add anotations
                     self!.featuredCollectionView.reloadData()
                     self!.nearYouCollectionView.reloadData()

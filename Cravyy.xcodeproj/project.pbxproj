@@ -45,7 +45,6 @@
 		75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */; };
 		75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */; };
 		75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155726F18ACC00E2FC50 /* LoginViewController.swift */; };
-		75CB155A26F297C100E2FC50 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155926F297C000E2FC50 /* PreferencesViewController.swift */; };
 		75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */; };
 		75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156026F2C56000E2FC50 /* HomeViewController.swift */; };
 		75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156226F2C62300E2FC50 /* MapKitViewController.swift */; };
@@ -126,7 +125,6 @@
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
 		75CB155726F18ACC00E2FC50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		75CB155926F297C000E2FC50 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		75CB156026F2C56000E2FC50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75CB156226F2C62300E2FC50 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
@@ -336,7 +334,6 @@
 			children = (
 				756CE30526F0174C0066EBA7 /* SignUpViewController.swift */,
 				75CB155726F18ACC00E2FC50 /* LoginViewController.swift */,
-				75CB155926F297C000E2FC50 /* PreferencesViewController.swift */,
 			);
 			path = "SignUp and SignIn";
 			sourceTree = "<group>";
@@ -730,7 +727,6 @@
 				7545F2F726F500F00000BD5E /* BestDealsCollectionViewCell.swift in Sources */,
 				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,
 				756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */,
-				75CB155A26F297C100E2FC50 /* PreferencesViewController.swift in Sources */,
 				7545F2FA26F69CF80000BD5E /* BestDeals.swift in Sources */,
 				7545C60D26FCC1A2003B20CA /* CategoriesTableViewCell.swift in Sources */,
 			);

@@ -34,6 +34,7 @@
 		756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */; };
 		756CE30226EFF7250066EBA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756CE30126EFF7250066EBA7 /* Images.xcassets */; };
 		756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756CE30526F0174C0066EBA7 /* SignUpViewController.swift */; };
+		7574D01A27061282001A38CD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7574D01927061282001A38CD /* FavoritesViewController.swift */; };
 		757D910926E8FB4D00598DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D910826E8FB4D00598DF1 /* AppDelegate.swift */; };
 		757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */; };
 		757D911026E8FB4D00598DF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757D910E26E8FB4D00598DF1 /* Main.storyboard */; };
@@ -108,6 +109,7 @@
 		756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewhelper.swift; sourceTree = "<group>"; };
 		756CE30126EFF7250066EBA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		756CE30526F0174C0066EBA7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7574D01927061282001A38CD /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		757D910526E8FB4D00598DF1 /* Cravyy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cravyy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757D910826E8FB4D00598DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				75CECA4D26FA82DB003EEFF2 /* DetailViewController.swift */,
 				7560E3EE26FB6713005181F3 /* UserProfileViewController.swift */,
 				7545C60F26FCE0B9003B20CA /* FetchedRestaurantsViewController.swift */,
+				7574D01927061282001A38CD /* FavoritesViewController.swift */,
 			);
 			path = SecondaryViews;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				7545C61326FCE45E003B20CA /* FetchedRestaurantsTableViewCell.swift in Sources */,
 				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
+				7574D01A27061282001A38CD /* FavoritesViewController.swift in Sources */,
 				750BD942270233E70039379E /* NetworkService.swift in Sources */,
 				7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,

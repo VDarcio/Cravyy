@@ -8,9 +8,13 @@
 import UIKit
 import ProgressHUD
 import Kingfisher
+import CoreData
 
 class DetailViewController: UIViewController {
 
+        
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var userslat = HomeViewController.latitude
     var userslong = HomeViewController.longitude
     
@@ -36,6 +40,7 @@ class DetailViewController: UIViewController {
     //TODO asign functions to all the labels
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         ProgressHUD.show()
         VcSetup()
         checkStatus()
@@ -108,6 +113,10 @@ class DetailViewController: UIViewController {
         
         
     }
+    func changeFavoriteButton(){
+        addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
+        addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    }
 
 
 
@@ -152,11 +161,31 @@ class DetailViewController: UIViewController {
         bookMarkStar.setImage(UIImage(systemName: "star.fill"), for: .normal)
     }
     
-  
+    //MARK:-Core Data Manager
+    
     @IBAction func addtoFavoritesPressed(_ sender: Any) {
+        changeFavoriteButton()
         
-        addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
-        addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        let newFavorite = FavRest(context: self.context)
+        newFavorite.name = self.restaurant?.name
+        newFavorite.website = self.restaurant?.website
+        newFavorite.phone = self.restaurant?.phone
+        newFavorite.adress = self.restaurant?.address
+        newFavorite.descriptionn = self.restaurant?.description
+        newFavorite.photourl = self.restaurant?.photo?.images?.original?.url
+        
+        self.saveItems()
+        
+    }
+    
+    func saveItems(){
+        
+        
+        do{
+            try context.save()
+        }catch{
+            print("error saving\(error)")
+        }
     }
     
 

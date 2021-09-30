@@ -32,7 +32,13 @@ class ViewAllTableViewCell: UITableViewCell {
             celldescription.text="📍 \(restaurant.distance_string ?? "")"
             
         case 2 :
-            celldescription.text = "💶 \(restaurant.price ?? "")"
+            if restaurant.price == nil{
+                celldescription.alpha = 0.0
+            }
+            else{
+                celldescription.text = "💶 \(restaurant.price ?? "")"
+            }
+           
             
         default: return
         }

@@ -1262,13 +1262,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bSj-Il-cau">
                                                         <rect key="frame" x="16" y="16" width="292" height="45"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-Yz-Des">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-Yz-Des">
                                                                 <rect key="frame" x="0.0" y="0.0" width="292" height="25.666666666666668"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                                 <color key="textColor" red="0.15686274510000001" green="1" blue="0.74901960779999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Prices in your Area" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-Y4-zuA">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our picks, specially for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-Y4-zuA">
                                                                 <rect key="frame" x="0.0" y="25.666666666666629" width="292" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <nil key="textColor"/>
@@ -1368,6 +1368,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvV-2h-wfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4183" y="84"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="Nzw-R3-YSk">
+            <objects>
+                <viewController id="zOs-UV-Acy" customClass="FavoritesViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gz3-8w-dws">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mwU-nE-6nv">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavCell" id="vxz-0D-dLd">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vxz-0D-dLd" id="Hyn-wR-VMS">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zOs-UV-Acy" id="Ev9-E8-JrX"/>
+                                    <outlet property="delegate" destination="zOs-UV-Acy" id="Had-wO-QT7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zjv-Yc-UJM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mwU-nE-6nv" firstAttribute="top" secondItem="Zjv-Yc-UJM" secondAttribute="top" id="953-L5-HZh"/>
+                            <constraint firstItem="mwU-nE-6nv" firstAttribute="leading" secondItem="Zjv-Yc-UJM" secondAttribute="leading" id="ZZ6-8b-QXh"/>
+                            <constraint firstItem="Zjv-Yc-UJM" firstAttribute="trailing" secondItem="mwU-nE-6nv" secondAttribute="trailing" id="tVZ-5P-WV4"/>
+                            <constraint firstItem="Zjv-Yc-UJM" firstAttribute="bottom" secondItem="mwU-nE-6nv" secondAttribute="bottom" id="upn-6l-tYg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableviews" destination="mwU-nE-6nv" id="uK1-Su-RSd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwc-Hv-wEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5780" y="84"/>
         </scene>
         <!--Categories-->
         <scene sceneID="kQu-OX-ZKV">

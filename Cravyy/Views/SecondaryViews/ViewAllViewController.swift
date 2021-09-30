@@ -8,8 +8,10 @@
 import UIKit
 import Kingfisher
 import ProgressHUD
+import CoreData
 
 class ViewAllViewViewController: UIViewController {
+    
     
     
     @IBOutlet weak var searchBar: UISearchBar!

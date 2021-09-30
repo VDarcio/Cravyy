@@ -16,7 +16,13 @@ class BestDealsCollectionViewCell: UICollectionViewCell {
     
     func setup(_ bestDeal: restaurantsModel){
         restaurantsName.text = bestDeal.name
-        restaurantsPrice.text = "💶\(bestDeal.price ?? "")"
+        if bestDeal.price == nil{
+            restaurantsPrice.alpha = 0.0
+        }
+        else{
+            restaurantsPrice.text = "💶\(bestDeal.price ?? "")"
+        }
+        
         if bestDeal.photo?.images?.original?.url != nil{
             restaurantsImage.kf.setImage(with: bestDeal.photo?.images?.original?.url?.asURL)
         }else{

@@ -12,9 +12,10 @@ import CoreData
 
 class DetailViewController: UIViewController {
 
-        
+        //context used to access core data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    //this 2 vars will either be aquired from a restaurant the user selects or from and old favorites the user added to favorites
     var restaurantLat : String?
     var restaurantLong : String?
     
@@ -38,9 +39,12 @@ class DetailViewController: UIViewController {
     //TODO asign functions to all the labels
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        //print our coredata path
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         ProgressHUD.show()
+        //setup the viewcontroller when the user selects a restaurant from the main menu or fetchedcategories
         VcSetup()
+        //check if we have all properties, if we dont change the alpha to 0.0 to make it disapear
         checkStatus()
        
         //create gestures
@@ -128,6 +132,7 @@ class DetailViewController: UIViewController {
         restaurantLong = restaurant?.longitude
         
     }
+    //this function is called when the users add the rstaurant to the favorites
     func changeFavoriteButton(){
         addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
         addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
@@ -161,7 +166,6 @@ class DetailViewController: UIViewController {
         
     }
     @IBAction func getAdress(){
-        print("open google maps")
         let lat = self.restaurantLat
         let long = self.restaurantLong
         
@@ -179,7 +183,9 @@ class DetailViewController: UIViewController {
     @IBAction func addtoFavoritesPressed(_ sender: Any) {
         changeFavoriteButton()
         
+        //create a new favorite restaurant
         let newFavorite = FavRest(context: self.context)
+        //add its properties
         newFavorite.name = self.restaurant?.name
         newFavorite.website = self.restaurant?.website
         newFavorite.phone = self.restaurant?.phone
@@ -188,7 +194,7 @@ class DetailViewController: UIViewController {
         newFavorite.photourl = self.restaurant?.photo?.images?.original?.url
         newFavorite.long = restaurant?.longitude
         newFavorite.lat = restaurant?.latitude
-        
+        //save to coreData
         self.saveItems()
         
     }

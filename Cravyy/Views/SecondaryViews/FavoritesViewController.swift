@@ -11,19 +11,22 @@ import Kingfisher
 
 class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //context to acess core data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var tableviews: UITableView!
     
-    
+    //array that we use to display the favorie restaurants, this array is quite simple to restaurantsmodel
     var favorites = [FavRest]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableviews.register(UINib(nibName: "FetchedRestaurantsTableViewCell", bundle: nil), forCellReuseIdentifier: "FetchedCell")
+        //load the array with coredata objects
         loadFavorites()
     }
     
+    //dismiss the view when the "x" is tapped
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }

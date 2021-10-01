@@ -15,8 +15,8 @@ class DetailViewController: UIViewController {
         
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var userslat = HomeViewController.latitude
-    var userslong = HomeViewController.longitude
+    var restaurantLat : String?
+    var restaurantLong : String?
     
     //MARK:-All Outlets
     var restaurant : restaurantsModel?
@@ -26,14 +26,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var restaurantRating: UILabel!
     @IBOutlet weak var restaurantDistance: UILabel!
     @IBOutlet weak var restaurantDescription: UITextView!
-    
-    
     @IBOutlet weak var webSiteLabel: UILabel!
     var restaurantWebsite: String?
     @IBOutlet weak var restaurantPhoneNumber: UILabel!
     @IBOutlet weak var restaurantPriceRange: UILabel!
     @IBOutlet weak var restaurantAdress: UILabel!
-    
+
     @IBOutlet weak var addtoFavoritesLabel: UIButton!
     
     
@@ -66,6 +64,8 @@ class DetailViewController: UIViewController {
         addtoFavoritesLabel.setTitle("Added to Favorites", for: .normal)
         addtoFavoritesLabel.setImage(UIImage(systemName: "star.fill"), for: .normal)
         restaurantDistance.alpha = 0.0
+        restaurantLat = favorite.lat
+        restaurantLong = favorite.long
         
         
     }
@@ -124,6 +124,8 @@ class DetailViewController: UIViewController {
         restaurantPriceRange.text = "💶\(restaurant?.price ?? "")"
         restaurantAdress.text = restaurant?.address
         
+        restaurantLat = restaurant?.latitude
+        restaurantLong = restaurant?.longitude
         
     }
     func changeFavoriteButton(){
@@ -138,7 +140,7 @@ class DetailViewController: UIViewController {
 //   Functions to deal with user interactions on labels and buttons
     @IBAction func CallRestaurant(){
         //make sure that is a number and remove the whitespaces to be compatible with type URL
-        if let number = restaurant?.phone?.removeWhitespace(){
+        if let number = restaurantPhoneNumber.text?.removeWhitespace(){
             //create url
             let urlAsString = URL(string: "tel://\(number)")
             //check if app can place the call
@@ -152,7 +154,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func openWebSite(){
-        if let website = restaurant?.website{
+        if let website = webSiteLabel.text{
             guard let url = URL(string: website) else { return }
             UIApplication.shared.open(url)
         }
@@ -160,8 +162,8 @@ class DetailViewController: UIViewController {
     }
     @IBAction func getAdress(){
         print("open google maps")
-        let lat = restaurant?.latitude
-        let long = restaurant?.longitude
+        let lat = self.restaurantLat
+        let long = self.restaurantLong
         
         let url = URL(string: "maps://?saddr=&daddr=\(lat ?? ""),\(long ?? "")")
         if UIApplication.shared.canOpenURL(url!){
@@ -184,6 +186,8 @@ class DetailViewController: UIViewController {
         newFavorite.adress = self.restaurant?.address
         newFavorite.descriptionn = self.restaurant?.description
         newFavorite.photourl = self.restaurant?.photo?.images?.original?.url
+        newFavorite.long = restaurant?.longitude
+        newFavorite.lat = restaurant?.latitude
         
         self.saveItems()
         

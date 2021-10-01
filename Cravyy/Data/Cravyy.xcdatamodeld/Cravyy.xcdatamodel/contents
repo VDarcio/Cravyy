@@ -3,12 +3,14 @@
     <entity name="FavRest" representedClassName=".FavRest" syncable="YES" codeGenerationType="class">
         <attribute name="adress" optional="YES" attributeType="String"/>
         <attribute name="descriptionn" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="String"/>
+        <attribute name="long" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <attribute name="photourl" optional="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FavRest" positionX="-63" positionY="-18" width="128" height="43"/>
+        <element name="FavRest" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>

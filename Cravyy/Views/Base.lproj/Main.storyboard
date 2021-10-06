@@ -389,6 +389,11 @@
                             <constraint firstItem="xRy-VB-VGg" firstAttribute="trailing" secondItem="z1y-FJ-Ldv" secondAttribute="trailing" id="FuW-DP-b0D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="r9b-91-mmy" id="SbS-4R-KtJ"/>
+                        <outlet property="nameTextField" destination="8J4-LV-kba" id="94V-Xq-mb6"/>
+                        <outlet property="passwordTextField" destination="jFZ-7u-Uq5" id="rxV-a3-DuC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w6-gu-opF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,6 +473,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="loginTapped:" destination="UZU-Sl-UWf" eventType="touchUpInside" id="shx-Qv-yfz"/>
                                                     <action selector="signUpTapped:" destination="5s6-ss-JNj" eventType="touchUpInside" id="j4Q-6N-hku"/>
                                                 </connections>
                                             </button>
@@ -529,6 +535,11 @@
                             <constraint firstItem="8Kg-8C-pYn" firstAttribute="leading" secondItem="Mfg-7k-43M" secondAttribute="leading" id="mtc-Xm-YiV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6Rw-6C-BRa" id="QKY-eD-MM1"/>
+                        <outlet property="passwordTextField" destination="87C-h0-58Z" id="urD-hZ-ydg"/>
+                        <segue destination="k8B-8k-4V4" kind="show" identifier="LoginToHome" id="mNH-by-lXK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWz-tv-cZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -871,8 +882,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T12-3H-ykK" customClass="CardView" customModule="Cravyy" customModuleProvider="target">
                                 <rect key="frame" x="50" y="245" width="328" height="150"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fzF-Vp-MwX">
-                                        <rect key="frame" x="0.0" y="0.0" width="328" height="150"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fzF-Vp-MwX">
+                                        <rect key="frame" x="0.0" y="-24" width="328" height="150"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XS-H6-H1n">
                                                 <rect key="frame" x="60" y="0.0" width="208" height="46.666666666666664"/>
@@ -921,6 +932,9 @@
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signOutPressed:" destination="Pe3-aF-Qrl" eventType="touchUpInside" id="bjK-Gx-o4K"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -965,11 +979,11 @@
             <objects>
                 <viewController id="bJS-nA-crF" customClass="CategoriesViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yzq-N4-nit">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ael-QV-toL">
-                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                                <rect key="frame" x="0.0" y="56" width="428" height="787"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="bJS-nA-crF" id="ufk-7Z-niL"/>
@@ -1044,11 +1058,11 @@
             <objects>
                 <viewController id="8yi-is-nSR" customClass="MapKitViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BUt-lf-dE9">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-ju-9Eq">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4gL-nK-f59"/>
@@ -1074,11 +1088,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="KOb-QE-J0w" customClass="HomeViewController" customModule="Cravyy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPl-sU-fk0">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-OT-mvg">
-                                <rect key="frame" x="0.0" y="44" width="428" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-JH-hMC">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1118,7 +1132,7 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-ff-ct2">
-                                <rect key="frame" x="0.0" y="94" width="428" height="749"/>
+                                <rect key="frame" x="0.0" y="50" width="428" height="793"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-UU-Ujd">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="1136"/>
@@ -1212,7 +1226,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Restaraunts if you dont want to wait" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re7-Io-pd3">
-                                                                <rect key="frame" x="0.0" y="44.666666666666629" width="292" height="19.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="44.666666666666686" width="292" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1446,7 +1460,7 @@
                     <tabBarItem key="tabBarItem" title="Categories" image="books.vertical.fill" catalog="system" id="itp-5v-Pbb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PWo-Ni-5c5">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1465,10 +1479,12 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Aec-s9-SML"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zaG-Hq-kTs">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XCs-gn-AwW">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

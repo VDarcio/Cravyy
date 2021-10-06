@@ -9,7 +9,8 @@ target 'Cravyy' do
 pod "Kingfisher"
 pod "ProgressHUD"
 pod "IQKeyboardManagerSwift"
-
+ pod "Firebase/Auth"
+pod "Firebase/Firestore"
 
 
   target 'CravyyTests' do

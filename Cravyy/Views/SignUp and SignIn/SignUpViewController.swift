@@ -40,6 +40,9 @@ class SignUpViewController: UIViewController {
                                 UserService.createUser(userID: Auth.auth().currentUser!.uid, username: username) { user in
                                     if user != nil{
                                         
+                                        //save user to userdeafults for AutoLogin next time
+                                        LocalStorageService.saveUser(userID: user?.userId, username: user?.username)
+                                        
                                         //present HomeVC
                                         let tabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC")
                                         self.view.window?.rootViewController = tabBarVC

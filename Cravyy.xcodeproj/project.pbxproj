@@ -44,6 +44,8 @@
 		757D911826E8FB5300598DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757D911626E8FB5300598DF1 /* LaunchScreen.storyboard */; };
 		757D912326E8FB5400598DF1 /* CravyyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D912226E8FB5400598DF1 /* CravyyTests.swift */; };
 		757D912E26E8FB5400598DF1 /* CravyyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D912D26E8FB5400598DF1 /* CravyyUITests.swift */; };
+		758C365E270DD15B00BB6427 /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C365D270DD15B00BB6427 /* LocalStorageService.swift */; };
+		758C3660270DD6BF00BB6427 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C365F270DD6BF00BB6427 /* Constants.swift */; };
 		75A0A72D27069BEC00DF897F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A0A72C27069BEC00DF897F /* GoogleService-Info.plist */; };
 		75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */; };
 		75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */; };
@@ -128,6 +130,8 @@
 		757D912926E8FB5400598DF1 /* CravyyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CravyyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		757D912D26E8FB5400598DF1 /* CravyyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CravyyUITests.swift; sourceTree = "<group>"; };
 		757D912F26E8FB5400598DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758C365D270DD15B00BB6427 /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		758C365F270DD6BF00BB6427 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75A0A72C27069BEC00DF897F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				7560E3F926FC0CAC005181F3 /* AppError.swift */,
 				750BD941270233E70039379E /* NetworkService.swift */,
 				75281CC8270A739000514F0D /* UserService.swift */,
+				758C365D270DD15B00BB6427 /* LocalStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				756CE2FF26EFDC910066EBA7 /* UiViewhelper.swift */,
 				7545C61726FD1DEB003B20CA /* StringasURL+Extension.swift */,
 				75FAECA82703EBF700A2549B /* String+trimWhiteSpaces.swift */,
+				758C365F270DD6BF00BB6427 /* Constants.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -709,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75281CCB270A74E900514F0D /* AppUser.swift in Sources */,
+				758C365E270DD15B00BB6427 /* LocalStorageService.swift in Sources */,
 				7545F2FC26F69D350000BD5E /* NearYou.swift in Sources */,
 				757D911326E8FB4D00598DF1 /* Cravyy.xcdatamodeld in Sources */,
 				750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */,
@@ -727,6 +734,7 @@
 				7515548526F42B51002679FB /* CardView.swift in Sources */,
 				75CB156326F2C62300E2FC50 /* MapKitViewController.swift in Sources */,
 				75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */,
+				758C3660270DD6BF00BB6427 /* Constants.swift in Sources */,
 				75CECA4E26FA82DB003EEFF2 /* DetailViewController.swift in Sources */,
 				7545C60A26FCB890003B20CA /* Category.swift in Sources */,
 				75281CC9270A739000514F0D /* UserService.swift in Sources */,

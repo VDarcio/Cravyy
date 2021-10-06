@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import ProgressHUD
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -29,21 +30,46 @@ class LoginViewController: UIViewController {
                 // check for errors
                 if let e = error {
                     ProgressHUD.showError(e.localizedDescription)
+                    return
                 }else{
+                    // get reference to the user that just logged in
+                    guard let user = Auth.auth().currentUser else {
+                        fatalError()
+                        return}
+                    //retrieve its username and userId from firestoreDataBase
+                    UserService.retrieveProfile(userID: user.uid) { loggedUser in
+                        
+                        if loggedUser == nil {
+                            print("create profile")
+                            
+                        }
+                        else{
+                            //save the existing profile to our localstorage
+                            LocalStorageService.saveUser(userID: loggedUser?.userId, username: loggedUser?.username)
+                            
+                            //present HomeVC
+                            let tabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC")
+                            self.view.window?.rootViewController = tabBarVC
+                            self.view.window?.makeKeyAndVisible()
+                        }
+                    }
                    
-                    
-                   
-                    //present HomeVC
-                    let tabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC")
-                    self.view.window?.rootViewController = tabBarVC
-                    self.view.window?.makeKeyAndVisible()
                     
                 }
             
                 
                 
             }
+            
+            
+            
+            
+            
+            
         }
+        
+         
+        
         
     }
     

@@ -18,9 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        //try and load and user if there was any signed in in the laste session
         let user = LocalStorageService.loadUser()
         if user != nil{
-            
+            //if there was, go straight to main menu
             let tabBarVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "tabBarVC")
             window?.rootViewController = tabBarVC
             window?.makeKeyAndVisible()

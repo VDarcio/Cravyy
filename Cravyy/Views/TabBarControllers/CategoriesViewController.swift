@@ -20,7 +20,10 @@ class CategoriesViewController: UIViewController {
         .init(name: "Mexican", image: UIImage(named: "mexican"), id: "5110"),
         .init(name: "Fast Food", image: UIImage(named: "Fast food"), id: "10646"),
         .init(name: "Brazilian", image: UIImage(named: "brazillian"), id: "10348"),
-        .init(name: "Bar food", image: UIImage(named: "bar food"), id: "10640")
+        .init(name: "Bar food", image: UIImage(named: "bar food"), id: "10640"),
+        .init(name: "Cafe", image: UIImage(named: "cafe"), id: "10642"),
+        .init(name: "Healthy", image: UIImage(named: "healthy"), id: "10679")
+            
     
     ]
     

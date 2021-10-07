@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: Any) {
        //check if user has typed on all 3 fields
-        if let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text{
+        if let email = emailTextField.text, let password = passwordTextField.text{
             //call firebase to create account on the server
             Auth.auth().createUser(withEmail: email, password: password) { data, error in
                 //check if there is an error

@@ -220,7 +220,8 @@ extension HomeViewController:CLLocationManagerDelegate{
                
             
                 //filter the array and separate the top rated restaurants
-                let featuredret = restaurantsfetched?.filter({$0.rating == "5.0" || $0.rating == "4.9" || $0.rating == "4.8" || $0.rating == "4.7" || $0.rating == "4.6" || $0.rating == "4.5" || $0.rating == "4.4" || $0.rating == "4.3" || $0.rating == "4.2" || $0.rating == "4.1" || $0.rating == "4.0"})
+                var featuredret = restaurantsfetched?.filter({$0.rating == "5.0" || $0.rating == "4.9" || $0.rating == "4.8" || $0.rating == "4.7" || $0.rating == "4.6" || $0.rating == "4.5" || $0.rating == "4.4" || $0.rating == "4.3" || $0.rating == "4.2" || $0.rating == "4.1" || $0.rating == "4.0"})
+                featuredret!.shuffle()
                 //update UI
                 DispatchQueue.main.async {
                     //divide the data in all categories

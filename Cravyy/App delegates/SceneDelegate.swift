@@ -16,16 +16,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
         
-        //try and load and user if there was any signed in in the laste session
-        let user = LocalStorageService.loadUser()
-        if user != nil{
-            //if there was, go straight to main menu
-            let tabBarVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "tabBarVC")
-            window?.rootViewController = tabBarVC
-            window?.makeKeyAndVisible()
+        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        //create an instance to te window
+        window = UIWindow(windowScene: scene)
+        
+        
+        //decide wich window to display by checking what the user decided
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var  controller : UIViewController!
+        
+        //show HOMEVC if the user has gone thru the onboarding once
+        if UserDefaults.standard.hasOnBoarded{
+            controller = storyboard.instantiateViewController(withIdentifier: "FirstVC")
+        }else{
+            //show onboarding if the user has opened the app for the  first time
+            controller = storyboard.instantiateViewController(withIdentifier: "OnBoardingVC")
         }
+        window?.rootViewController = controller
+        
+    
+//        try and load a user if there was any signed in in the last session
+        let user = LocalStorageService.loadUser()
+        if user != nil ||  UserDefaults.standard.hasSkippedLogin {
+            //if there was, go straight to main menu
+            controller = storyboard.instantiateViewController(withIdentifier: "tabBarVC")
+            window?.rootViewController = controller
+        }
+        window?.makeKeyAndVisible()
         
     }
 

@@ -35,8 +35,7 @@ class FirstViewController: UIViewController {
     
 
     
-    @IBAction func SignupWithGoogleTapped(_ sender: Any) {
-    }
+   
     
     @IBAction func signUptapped(_ sender: Any) {
         //check if signupVc exists, if it does... present modally
@@ -56,6 +55,7 @@ class FirstViewController: UIViewController {
     
     
     @IBAction func skipTapped(_ sender: UIButton) {
+        UserDefaults.standard.hasSkippedLogin = true
         if tabBarVC != nil{
             tabBarVC!.modalPresentationStyle = .fullScreen
             tabBarVC!.modalTransitionStyle = .flipHorizontal

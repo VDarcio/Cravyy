@@ -46,6 +46,7 @@
 		757D912E26E8FB5400598DF1 /* CravyyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757D912D26E8FB5400598DF1 /* CravyyUITests.swift */; };
 		758C365E270DD15B00BB6427 /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C365D270DD15B00BB6427 /* LocalStorageService.swift */; };
 		758C3660270DD6BF00BB6427 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C365F270DD6BF00BB6427 /* Constants.swift */; };
+		75936117270F4F2F0029F12E /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75936116270F4F2F0029F12E /* UserDefaults+Extension.swift */; };
 		75A0A72D27069BEC00DF897F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A0A72C27069BEC00DF897F /* GoogleService-Info.plist */; };
 		75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */; };
 		75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */; };
@@ -132,6 +133,7 @@
 		757D912F26E8FB5400598DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758C365D270DD15B00BB6427 /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
 		758C365F270DD6BF00BB6427 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75936116270F4F2F0029F12E /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		75A0A72C27069BEC00DF897F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				7545C61726FD1DEB003B20CA /* StringasURL+Extension.swift */,
 				75FAECA82703EBF700A2549B /* String+trimWhiteSpaces.swift */,
 				758C365F270DD6BF00BB6427 /* Constants.swift */,
+				75936116270F4F2F0029F12E /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */,
 				756CE2F926EF78CD0066EBA7 /* FirstViewController.swift in Sources */,
 				7545F2FA26F69CF80000BD5E /* BestDeals.swift in Sources */,
+				75936117270F4F2F0029F12E /* UserDefaults+Extension.swift in Sources */,
 				7545C60D26FCC1A2003B20CA /* CategoriesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

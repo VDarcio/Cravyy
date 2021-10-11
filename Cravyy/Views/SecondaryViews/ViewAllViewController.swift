@@ -57,7 +57,7 @@ class ViewAllViewViewController: UIViewController {
         case 1 :
             title = "Near You"
         case 2:
-            title = "Best deals"
+            title = "Recommendations"
             
         default: title = ""
             

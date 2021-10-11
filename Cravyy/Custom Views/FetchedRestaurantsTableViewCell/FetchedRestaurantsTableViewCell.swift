@@ -19,7 +19,7 @@ class FetchedRestaurantsTableViewCell: UITableViewCell {
         cellImage.layer.cornerRadius = 20
                 cellImage.clipsToBounds = true
                cellLabel.text = restaurant.name
-        cellDistance.text = restaurant.distance_string
+        cellDistance.text = "📍 \(restaurant.distance_string ?? "")"
         if restaurant.photo?.images?.original != nil{
             cellImage.kf.setImage(with: restaurant.photo?.images?.original?.url?.asURL)
         }else{

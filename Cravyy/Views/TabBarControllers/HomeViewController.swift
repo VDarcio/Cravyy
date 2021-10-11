@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         registerCells()
         //request user location
         locationManager.delegate=self
-        locationManager.requestWhenInUseAuthorization()
+       // locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
         //Instantiate ViewController that presents All the items

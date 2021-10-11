@@ -9,11 +9,13 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import Firebase
+import CoreLocation
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var locationmanager = CLLocationManager()
   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -21,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         FirebaseApp.configure()
+        locationmanager.requestWhenInUseAuthorization()
+        
         return true
     }
 

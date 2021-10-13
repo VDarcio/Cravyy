@@ -138,6 +138,7 @@
 		75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
+		75C2315D2717A19400616D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75CB155726F18ACC00E2FC50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		75CB156026F2C56000E2FC50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +361,7 @@
 		757D90FC26E8FB4D00598DF1 = {
 			isa = PBXGroup;
 			children = (
+				75C2315D2717A19400616D54 /* README.md */,
 				757D910726E8FB4D00598DF1 /* Cravyy */,
 				756CE30426F00A920066EBA7 /* Tests */,
 				757D910626E8FB4D00598DF1 /* Products */,

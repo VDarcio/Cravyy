@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */; };
 		750BD94027020FFB0039379E /* ViewAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */; };
-		750BD942270233E70039379E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD941270233E70039379E /* NetworkService.swift */; };
 		7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */; };
 		7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */; };
 		7515548526F42B51002679FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515548426F42B51002679FB /* CardView.swift */; };
@@ -51,6 +50,8 @@
 		75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5ED26EEA730009A5D40 /* OnBoardingViewController.swift */; };
 		75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */; };
 		75B7B5F326EEA9D9009A5D40 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */; };
+		75C2315F2717A8BB00616D54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2315E2717A8BB00616D54 /* NetworkService.swift */; };
+		75C231612717A8FF00616D54 /* NetworkServiceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C231602717A8FF00616D54 /* NetworkServiceTemplate.swift */; };
 		75CB155826F18ACC00E2FC50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155726F18ACC00E2FC50 /* LoginViewController.swift */; };
 		75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */; };
 		75CB156126F2C56000E2FC50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CB156026F2C56000E2FC50 /* HomeViewController.swift */; };
@@ -90,7 +91,6 @@
 		4B04C1379DE3898E709D827E /* Pods-CravyyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CravyyTests.release.xcconfig"; path = "Target Support Files/Pods-CravyyTests/Pods-CravyyTests.release.xcconfig"; sourceTree = "<group>"; };
 		750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllTableViewCell.swift; sourceTree = "<group>"; };
 		750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllTableViewCell.xib; sourceTree = "<group>"; };
-		750BD941270233E70039379E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		7515548426F42B51002679FB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -139,6 +139,8 @@
 		75B7B5EF26EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B7B5F226EEA9D8009A5D40 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
 		75C2315D2717A19400616D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		75C2315E2717A8BB00616D54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		75C231602717A8FF00616D54 /* NetworkServiceTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTemplate.swift; sourceTree = "<group>"; };
 		75CB155726F18ACC00E2FC50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CB155D26F2C47600E2FC50 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		75CB156026F2C56000E2FC50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -286,9 +288,10 @@
 			isa = PBXGroup;
 			children = (
 				7560E3F926FC0CAC005181F3 /* AppError.swift */,
-				750BD941270233E70039379E /* NetworkService.swift */,
 				75281CC8270A739000514F0D /* UserService.swift */,
 				758C365D270DD15B00BB6427 /* LocalStorageService.swift */,
+				75C2315E2717A8BB00616D54 /* NetworkService.swift */,
+				75C231602717A8FF00616D54 /* NetworkServiceTemplate.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				757D910B26E8FB4D00598DF1 /* SceneDelegate.swift in Sources */,
 				7560E3FA26FC0CAC005181F3 /* AppError.swift in Sources */,
 				7545F2F226F4C2A00000BD5E /* NearYouCollectionViewCell.swift in Sources */,
+				75C2315F2717A8BB00616D54 /* NetworkService.swift in Sources */,
 				7560E3F826FC0868005181F3 /* RestaurantModel.swift in Sources */,
 				75B7B5F026EEA76E009A5D40 /* OnBoardingCollectionViewCell.swift in Sources */,
 				75CB156526F2C8F500E2FC50 /* CategoriesViewController.swift in Sources */,
@@ -747,10 +751,10 @@
 				7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */,
 				75B7B5EE26EEA730009A5D40 /* OnBoardingViewController.swift in Sources */,
 				7574D01A27061282001A38CD /* FavoritesViewController.swift in Sources */,
-				750BD942270233E70039379E /* NetworkService.swift in Sources */,
 				7560E3EF26FB6713005181F3 /* UserProfileViewController.swift in Sources */,
 				75CB155E26F2C47600E2FC50 /* MainTabBarController.swift in Sources */,
 				756CE30626F0174C0066EBA7 /* SignUpViewController.swift in Sources */,
+				75C231612717A8FF00616D54 /* NetworkServiceTemplate.swift in Sources */,
 				75CECA4C26FA3C46003EEFF2 /* ViewAllViewController.swift in Sources */,
 				756CE30026EFDC910066EBA7 /* UiViewhelper.swift in Sources */,
 				7545F2F726F500F00000BD5E /* BestDealsCollectionViewCell.swift in Sources */,

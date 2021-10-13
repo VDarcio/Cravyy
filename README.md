@@ -18,9 +18,9 @@ We will always bring every information we can find on the Restaurant our user pi
 
 
 <p float="left">
-  <img src="screenshots/ss3.jpg" width="310" />
-  <img src="screenshots/ss1.jpg" width="310" /> 
-  <img src="screenshots/ss2.jpg" width="310" />
+  <img src="screenshots/ss3.jpg" width="300" />
+  <img src="screenshots/ss1.jpg" width="300" /> 
+  <img src="screenshots/ss2.jpg" width="300" />
 </p>
 
 # Features

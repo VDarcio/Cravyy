@@ -1,7 +1,7 @@
 #  Cravyy
 
 ![Screenshot](screenshots/logoreadme.jpg)
-![Screenshot](screenshots/ss1.jpg)
+![Screenshot](screenshots/ss4.jpg)
 
 
 

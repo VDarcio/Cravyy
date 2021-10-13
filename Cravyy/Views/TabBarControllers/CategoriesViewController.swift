@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class CategoriesViewController: UIViewController {
 
@@ -62,6 +63,12 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
             return
         }
         //use category id to fetch restaurants from the backend
+        guard let lat = HomeViewController.latitude else {
+            
+            ProgressHUD.show("Please wait")
+            return
+        }
+        
         let FetchedRestaurantsVC = storyboard?.instantiateViewController(withIdentifier: "FetchedVC") as! FetchedRestaurantsViewController
         FetchedRestaurantsVC.restaurantid = id
         FetchedRestaurantsVC.selectedCat = categories[indexPath.row].name

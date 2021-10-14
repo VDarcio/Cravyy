@@ -41,6 +41,10 @@ We will always bring every information we can find on the Restaurant our user pi
 # Download
 If you have an IOS device running ios 14.5 or later you can download this app at:https://apps.apple.com/pt/app/cravyy/id1589307279?l=en
 
+<p align="center">
+   <img src="screenshots/appstore.jpg" width="400" alt="[]"/>
+</p>
+
 
 
 

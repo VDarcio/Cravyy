@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		750BD93F27020FFB0039379E /* ViewAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */; };
 		750BD94027020FFB0039379E /* ViewAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */; };
+		7513AA3A27245251009D0920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7513AA3927245251009D0920 /* GoogleService-Info.plist */; };
 		7515547B26F426DE002679FB /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */; };
 		7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */; };
 		7515548526F42B51002679FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515548426F42B51002679FB /* CardView.swift */; };
 		75281CC9270A739000514F0D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75281CC8270A739000514F0D /* UserService.swift */; };
 		75281CCB270A74E900514F0D /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75281CCA270A74E900514F0D /* AppUser.swift */; };
-		753F0A0627149F55001367FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 753F0A0527149F55001367FA /* GoogleService-Info.plist */; };
 		7545C60A26FCB890003B20CA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545C60926FCB890003B20CA /* Category.swift */; };
 		7545C60D26FCC1A2003B20CA /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545C60B26FCC1A2003B20CA /* CategoriesTableViewCell.swift */; };
 		7545C60E26FCC1A2003B20CA /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7545C60C26FCC1A2003B20CA /* CategoriesTableViewCell.xib */; };
@@ -91,12 +91,12 @@
 		4B04C1379DE3898E709D827E /* Pods-CravyyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CravyyTests.release.xcconfig"; path = "Target Support Files/Pods-CravyyTests/Pods-CravyyTests.release.xcconfig"; sourceTree = "<group>"; };
 		750BD93D27020FFB0039379E /* ViewAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllTableViewCell.swift; sourceTree = "<group>"; };
 		750BD93E27020FFB0039379E /* ViewAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllTableViewCell.xib; sourceTree = "<group>"; };
+		7513AA3927245251009D0920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7515547926F426DE002679FB /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7515547A26F426DE002679FB /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		7515548426F42B51002679FB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		75281CC8270A739000514F0D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		75281CCA270A74E900514F0D /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
-		753F0A0527149F55001367FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7545C60926FCB890003B20CA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7545C60B26FCC1A2003B20CA /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		7545C60C26FCC1A2003B20CA /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -317,6 +317,7 @@
 			children = (
 				757D910A26E8FB4D00598DF1 /* SceneDelegate.swift */,
 				757D910826E8FB4D00598DF1 /* AppDelegate.swift */,
+				7513AA3927245251009D0920 /* GoogleService-Info.plist */,
 			);
 			path = "App delegates";
 			sourceTree = "<group>";
@@ -338,7 +339,6 @@
 			isa = PBXGroup;
 			children = (
 				757D911126E8FB4D00598DF1 /* Cravyy.xcdatamodeld */,
-				753F0A0527149F55001367FA /* GoogleService-Info.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -592,7 +592,7 @@
 				7515547C26F426DE002679FB /* FeaturedCollectionViewCell.xib in Resources */,
 				757D911026E8FB4D00598DF1 /* Main.storyboard in Resources */,
 				7545F2F826F500F10000BD5E /* BestDealsCollectionViewCell.xib in Resources */,
-				753F0A0627149F55001367FA /* GoogleService-Info.plist in Resources */,
+				7513AA3A27245251009D0920 /* GoogleService-Info.plist in Resources */,
 				7545C61426FCE45E003B20CA /* FetchedRestaurantsTableViewCell.xib in Resources */,
 				7545F2F326F4C2A00000BD5E /* NearYouCollectionViewCell.xib in Resources */,
 			);

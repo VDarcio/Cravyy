@@ -25,6 +25,9 @@ class BestDealsCollectionViewCell: UICollectionViewCell {
         
         if bestDeal.photo?.images?.original?.url != nil{
             restaurantsImage.kf.setImage(with: bestDeal.photo?.images?.original?.url?.asURL)
+            
+            
+            
         }else{
             restaurantsImage.image = UIImage(named: "brazillian")
         }
